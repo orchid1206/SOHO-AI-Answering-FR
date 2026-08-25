@@ -8,13 +8,15 @@
      따로 넣으면 이중 로드되어 데이터가 꼬입니다.
 
    ▣ 담당자 배포 전 확인 (딱 2가지)
-     1) 아래 GA4_ID 가 올바른 새 측정 ID 인지 확인 (기본값 이미 반영됨)
-     2) 본인 사이트의 실제 도메인이 아래 CONCEPT_MAP 의 키워드와 맞는지 확인
-        - familyprotection-landing.vercel.app  → protection
-        - soho-ai-answering.vercel.app         → soho_answering
-        - factcheck-landing.vercel.app         → factcheck
-        - ai-call-assistant-landing.vercel.app → ai_call_assistant
-        도메인을 바꿔서 배포하면 CONCEPT_MAP 의 키워드도 같이 고쳐야 함.
+     1) 아래 GA4_ID 가 올바른 측정 ID 인지 확인 (기본값 이미 반영됨)
+     2) 각 HTML <head> 에 tracking.js 보다 "먼저" 아래 한 줄이 있는지 확인
+          <script>window.SITE_ID = 'fr-xxx';</script>
+        - 이 SITE_ID 값이 GA(concept)와 DB(site 컬럼)를 동일하게 맞추는 유일한 기준.
+        - HTML 의 payload( site: window.SITE_ID ) 와 GA concept 이 자동으로 같아짐.
+        - 도메인을 바꿔 배포해도 여기는 손댈 필요 없음(도메인을 추측하지 않음).
+        - SITE_ID 를 깜빡하면 예전 도메인 추측으로 폴백하며 콘솔에 경고를 남김.
+        권장 SITE_ID 값(프랑스 세트):
+          fr-protection / fr-ai-call-assistant / fr-factcheck / fr-soho-ai-answering
 
    ▣ 잡는 이벤트 (4개)
         page_view        - 페이지 도착 (GA가 자동으로 잡음, 코드 불필요)
@@ -36,14 +38,23 @@
   var GA4_ID = 'G-0MH9230B7L';
   /* ▲▲▲ 여기만 바뀌면 전체 전송 대상이 바뀝니다 ▲▲▲ */
 
-  /* ---- 현재 도메인이 어떤 컨셉인지 판별 (hostname 기반) ---- */
-  var host = (location.hostname || '').toLowerCase();
-  var CONCEPT =
-      host.indexOf('familyprotection') > -1 ? 'protection' :
-      host.indexOf('soho')             > -1 ? 'soho_answering' :
-      host.indexOf('factcheck')        > -1 ? 'factcheck' :
-      host.indexOf('ai-call-assistant')> -1 ? 'ai_call_assistant' :
-      'unknown';   /* 어디에도 안 맞으면 unknown 으로 들어옴 → 도메인/키워드 점검 신호 */
+  /* ---- 컨셉(랜딩 정체) 판별 : HTML이 <head>에서 선언한 window.SITE_ID 를 그대로 사용 ----
+     ★ 이 값이 DB(site 컬럼)와 GA(concept)를 동일하게 맞추는 유일한 기준점입니다.
+       각 HTML <head> 에 tracking.js 보다 먼저 다음 한 줄이 있어야 함:
+         <script>window.SITE_ID = 'fr-xxx';</script>
+       도메인 문자열을 추측하지 않으므로, 도메인이 몇 개든/바뀌든 영향 없음.
+     ── 안전장치: SITE_ID 선언을 깜빡한 경우에만 예전 도메인 추측으로 폴백(+콘솔 경고) ── */
+  var CONCEPT = (typeof window.SITE_ID === 'string' && window.SITE_ID) ? window.SITE_ID : (function () {
+    var host = (location.hostname || '').toLowerCase();
+    var guess =
+        host.indexOf('familyprotection') > -1 ? 'protection' :
+        host.indexOf('soho')             > -1 ? 'soho_answering' :
+        host.indexOf('factcheck')        > -1 ? 'factcheck' :
+        host.indexOf('ai-call-assistant')> -1 ? 'ai_call_assistant' :
+        'unknown';
+    console.warn('[tracking] window.SITE_ID 미선언 → 도메인 추측값(' + guess + ') 사용. HTML <head>에 SITE_ID 선언을 추가하세요.');
+    return guess;
+  })();
 
   var idReady = /^G-[A-Z0-9]+$/i.test(GA4_ID) && GA4_ID !== 'G-XXXXXXXXXX';
 
