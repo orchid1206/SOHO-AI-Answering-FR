@@ -1,2671 +1,364 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- ★ 이 랜딩의 유일한 정체 식별자. DB(site)와 GA(concept)가 이 값 하나를 공유함. -->
-  <script>window.SITE_ID = 'fr-soho-ai-answering';</script>
-
-  <script
-    id="Cookiebot"
-    src="https://consent.cookiebot.com/uc.js"
-    data-cbid="cced738a-fa5f-4aff-8391-a37454d4b7ab"
-    data-blockingmode="auto"
-    type="text/javascript">
-  </script>
-
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
-  <meta name="theme-color" content="#F5F5F7" />
-
-  <title>Standard téléphonique IA pour indépendants et TPE — ne manquez plus les appels importants</title>
-  <meta
-    content="Un standard téléphonique IA pour indépendants et TPE : quand vous ne pouvez pas décrocher, l’IA prend le relais selon vos consignes, répond à partir des informations de votre établissement et vous transmet l’essentiel après l’appel."
-    name="description"
-  />
-
-  <link crossorigin href="https://cdn.jsdelivr.net" rel="preconnect"/>
-  <link
-    crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-    rel="stylesheet"
-  />
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    :root{
-      --bg:#F5F5F7;
-      --surface:#FFFFFF;
-      --surface-soft:#EFEFF1;
-      --surface-blue:#EEF2FF;
-      --surface-green:#F3F6E9;
-
-      --ink:#111113;
-      --text:#1D1D1F;
-      --muted:#6E6E73;
-      --subtle:#8E8E93;
-
-      --line:#D9D9DE;
-      --line-strong:#C7C7CC;
-
-      --cobalt:#4664FF;
-      --cobalt-hover:#3855EF;
-      --signal:#C9FF57;
-      --danger:#E95360;
-
-      --radius-control:10px;
-      --radius-button:12px;
-      --radius-card:18px;
-      --radius-media:22px;
-
-      --page-pad:clamp(16px,4vw,56px);
-      --max:1320px;
-      --ease:cubic-bezier(.16,1,.3,1);
-      --header-h:64px;
-
-      --font-ko:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      --font-en:"Manrope","Pretendard Variable",Pretendard,sans-serif;
-    }
-
-    *{box-sizing:border-box;margin:0;padding:0}
-
-    html{
-      scroll-behavior:smooth;
-      background:var(--bg);
-      -webkit-text-size-adjust:100%;
-    }
-
-    body{
-      min-width:0;
-      overflow-x:hidden;
-      font-family:var(--font-ko);
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-      letter-spacing:-.018em;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-
-    html[lang="fr"] body{letter-spacing:-.01em}
-
-    html[lang="ko"] h1,
-    html[lang="ko"] h2,
-    html[lang="ko"] h3,
-    html[lang="ko"] p,
-    html[lang="ko"] button,
-    html[lang="ko"] a{
-      word-break:keep-all;
-    }
-
-    html[lang="fr"] h1,
-    html[lang="fr"] h2,
-    html[lang="fr"] h3,
-    html[lang="fr"] p,
-    html[lang="fr"] button,
-    html[lang="fr"] a{
-      word-break:normal;
-      overflow-wrap:anywhere;
-      hyphens:auto;
-    }
-
-    a{color:inherit;text-decoration:none}
-    button,input{font:inherit}
-    button{cursor:pointer}
-    img{display:block;width:100%;max-width:100%}
-    button,a{-webkit-tap-highlight-color:transparent}
-
-    :focus-visible{
-      outline:3px solid rgba(70,100,255,.26);
-      outline-offset:3px;
-    }
-
-    .container{
-      width:min(100%,var(--max));
-      margin-inline:auto;
-      padding-inline:var(--page-pad);
-    }
-
-    .section{padding:clamp(72px,8vw,124px) 0}
-    .section-soft{background:var(--surface-soft)}
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      color:var(--muted);
-      font:700 12px/1 var(--font-en);
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-
-    .eyebrow::before{
-      content:"";
-      width:7px;
-      height:7px;
-      border-radius:50%;
-      background:var(--signal);
-      box-shadow:0 0 0 5px rgba(201,255,87,.13);
-    }
-
-    .section-head{
-      display:grid;
-      grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);
-      gap:30px;
-      align-items:end;
-      margin-bottom:30px;
-    }
-
-    .section-head h2,
-    .survey-intro h2,
-    .trust-copy h2,
-    .faq-head h2{
-      margin-top:14px;
-      color:var(--ink);
-      font-size:clamp(38px,5vw,68px);
-      line-height:1.04;
-      letter-spacing:-.05em;
-      font-weight:650;
-      text-wrap:balance;
-    }
-
-    html[lang="fr"] .section-head h2,
-    html[lang="fr"] .survey-intro h2,
-    html[lang="fr"] .trust-copy h2,
-    html[lang="fr"] .faq-head h2{
-      letter-spacing:-.035em;
-    }
-
-    .section-head>p{
-      justify-self:end;
-      max-width:440px;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.65;
-    }
-
-    .btn{
-      min-height:48px;
-      border:1px solid transparent;
-      border-radius:var(--radius-button);
-      padding:0 18px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      font-weight:700;
-      transition:
-        background .2s var(--ease),
-        border-color .2s var(--ease),
-        transform .2s var(--ease),
-        color .2s var(--ease);
-    }
-
-    .btn:active{transform:translateY(1px)}
-    .btn-primary{background:var(--cobalt);color:#fff}
-    .btn-primary:hover{background:var(--cobalt-hover)}
-    .btn-secondary{background:#fff;color:var(--text);border-color:var(--line-strong)}
-    .btn-secondary:hover{background:#F8F8FA}
-    .btn[disabled]{cursor:not-allowed;opacity:.45}
-
-    /* HEADER */
-    .header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background:rgba(245,245,247,.88);
-      border-bottom:1px solid rgba(17,17,19,.08);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-    }
-
-    .nav{
-      min-height:var(--header-h);
-      display:flex;
-      align-items:center;
-      gap:18px;
-    }
-
-    .brand{
-      display:inline-flex;
-      align-items:center;
-      white-space:nowrap;
-    }
-
-    .brand-logo{
-      display:block;
-      height:28px;
-      width:auto;
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:22px;
-      margin-left:28px;
-      color:var(--muted);
-      font-size:13px;
-      font-weight:650;
-    }
-
-    .nav-actions{
-      margin-left:auto;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    .nav .btn{
-      min-height:40px;
-      padding-inline:14px;
-      font-size:13px;
-    }
-
-    /* ============================================================
-       HERO — 핵심 HTML과 동일한 단일 이미지 카드
-       이미지 파일은 다음 단계에서 교체:
-       assets/hero.png
-       ============================================================ */
-    .hero{
-      position:relative;
-      padding:clamp(52px,6.2vw,88px) 0 clamp(46px,5.5vw,72px);
-      overflow:hidden;
-      background:
-        radial-gradient(circle at 80% 8%,rgba(70,100,255,.08),transparent 26%),
-        radial-gradient(circle at 16% 78%,rgba(201,255,87,.07),transparent 20%),
-        linear-gradient(180deg,#FBFBFD,#F5F5F7);
-    }
-
-    .hero-single{display:block}
-
-    .hero-shell-embedded{
-      position:relative;
-      overflow:hidden;
-      border:1px solid #D8D8DC;
-      border-radius:var(--radius-media);
-      background:linear-gradient(145deg,#ECECF0,#E2E2E7);
-      min-height:620px;
-      box-shadow:0 18px 45px rgba(0,0,0,.055);
-    }
-
-    .hero-image-embedded{
-      /* Protect형 우측 카피 영역을 비우기 위해 이미지 초점을 좌측으로 유지 */
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:34% center;
-    }
-
-    .hero-embedded-veil{
-      position:absolute;
-      inset:0;
-      background:linear-gradient(
-        90deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0) 38%,
-        rgba(16,20,30,.15) 57%,
-        rgba(16,20,30,.48) 100%
-      );
-      pointer-events:none;
-    }
-
-    .hero-embedded-overlay{
-      position:relative;
-      z-index:2;
-      min-height:620px;
-      display:flex;
-      justify-content:flex-end;
-      align-items:center;
-      padding:clamp(28px,4vw,44px);
-    }
-
-    .hero-embedded-copy{
-      width:min(100%,480px);
-      padding:18px 18px 4px;
-      border-radius:20px;
-      background:rgba(18,21,27,.10);
-      backdrop-filter:blur(8px);
-      -webkit-backdrop-filter:blur(8px);
-    }
-
-    .hero-embedded-copy .eyebrow{
-      margin-bottom:16px;
-      color:rgba(255,255,255,.88);
-    }
-
-    .hero-embedded-copy .eyebrow::before{
-      box-shadow:0 0 0 5px rgba(201,255,87,.10);
-    }
-
-    .hero-embedded-copy h1{
-      max-width:100%;
-      color:#fff;
-      font-size:clamp(40px,4.6vw,62px);
-      line-height:1.02;
-      letter-spacing:-.05em;
-      font-weight:800;
-      text-wrap:balance;
-      text-shadow:0 10px 30px rgba(0,0,0,.22);
-    }
-
-    html[lang="fr"] .hero-embedded-copy h1{
-      letter-spacing:-.035em;
-    }
-
-    .hero-embedded-copy h1 .soft{
-      display:block;
-      margin-top:10px;
-      color:rgba(255,255,255,.86);
-      font-weight:650;
-    }
-
-    .hero-status-card{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns:auto 1fr;
-      gap:12px;
-      align-items:center;
-      padding:15px;
-      border-radius:15px;
-      background:rgba(255,255,255,.93);
-      border:1px solid rgba(17,17,19,.09);
-      backdrop-filter:blur(16px);
-      -webkit-backdrop-filter:blur(16px);
-      box-shadow:0 14px 36px rgba(0,0,0,.08);
-    }
-
-    .hero-status-icon{
-      width:40px;
-      height:40px;
-      border-radius:12px;
-      display:grid;
-      place-items:center;
-      background:var(--surface-blue);
-      color:var(--cobalt);
-      font-size:19px;
-      font-weight:800;
-    }
-
-    .hero-status-card strong{
-      display:block;
-      font-size:14px;
-      line-height:1.35;
-    }
-
-    .hero-status-card p{
-      margin-top:3px;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.4;
-    }
-
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:10px;
-      margin-top:28px;
-    }
-
-    .hero-actions-below{
-      justify-content:center;
-      margin-top:18px;
-    }
-
-    .hero-note{
-      width:100%;
-      color:var(--subtle);
-      font-size:13px;
-      font-weight:650;
-      text-align:center;
-    }
-
-    /* SURVEY — Hero 바로 아래 */
-    .survey{
-      background:#F2F2F4;
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-
-    .survey-shell{
-      display:grid;
-      grid-template-columns:minmax(260px,.64fr) minmax(0,1.36fr);
-      gap:clamp(34px,6vw,78px);
-      align-items:start;
-    }
-
-    .survey-intro{
-      position:sticky;
-      top:calc(var(--header-h) + 28px);
-    }
-
-    .survey-intro h2{font-size:clamp(40px,4.7vw,62px)}
-
-    .survey-intro p{
-      margin-top:18px;
-      color:var(--muted);
-      max-width:440px;
-    }
-
-    .survey-meta{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:24px;
-    }
-
-    .meta-chip{
-      padding:8px 10px;
-      border:1px solid var(--line-strong);
-      border-radius:999px;
-      background:rgba(255,255,255,.72);
-      color:var(--muted);
-      font-size:11px;
-      font-weight:700;
-    }
-
-    .survey-card{
-      min-width:0;
-      padding:clamp(20px,3vw,34px);
-      border:1px solid var(--line-strong);
-      border-radius:var(--radius-card);
-      background:#fff;
-      box-shadow:0 16px 36px rgba(0,0,0,.045);
-      overflow:hidden;
-    }
-
-    .survey-progress{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:28px;
-      color:var(--subtle);
-      font:700 12px/1 var(--font-en);
-    }
-
-    .progress-track{
-      flex:1;
-      height:5px;
-      border-radius:999px;
-      background:#EBEBEF;
-      overflow:hidden;
-    }
-
-    .progress-bar{
-      height:100%;
-      width:33.333%;
-      background:var(--cobalt);
-      border-radius:inherit;
-      transition:width .3s var(--ease);
-    }
-
-    #questionViewport{
-      position:relative;
-      overflow:hidden;
-      transition:height .34s var(--ease);
-    }
-
-    .survey-question h3{
-      font-size:clamp(27px,3.3vw,42px);
-      line-height:1.14;
-      letter-spacing:-.04em;
-      font-weight:650;
-    }
-
-    .survey-help{
-      margin-top:10px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .option-grid{
-      display:grid;
-      gap:9px;
-      margin-top:24px;
-    }
-
-    .option{
-      min-height:62px;
-      border:1px solid var(--line-strong);
-      border-radius:var(--radius-control);
-      background:#FCFCFD;
-      color:var(--text);
-      padding:14px 15px;
-      text-align:left;
-      font-weight:650;
-      line-height:1.4;
-      transition:
-        background .2s var(--ease),
-        border-color .2s var(--ease),
-        box-shadow .2s var(--ease),
-        transform .18s var(--ease);
-    }
-
-    .option:hover{
-      border-color:rgba(70,100,255,.40);
-      background:#F7F8FF;
-    }
-
-    .option:active{transform:scale(.99)}
-
-    .option.selected{
-      border-color:var(--cobalt);
-      background:var(--surface-blue);
-      box-shadow:inset 0 0 0 1px var(--cobalt);
-    }
-
-    .other-business-field{margin-top:12px}
-
-    .other-business-field input{
-      width:100%;
-      min-height:52px;
-      padding:0 15px;
-      border:1px solid var(--line-strong);
-      border-radius:10px;
-      background:#fff;
-      color:var(--text);
-      font:inherit;
-      font-size:14px;
-      outline:none;
-      transition:border-color .2s,box-shadow .2s;
-    }
-
-    .other-business-field input:focus{
-      border-color:var(--cobalt);
-      box-shadow:0 0 0 3px rgba(70,100,255,.10);
-    }
-
-    #questionWrap:has(.option[data-value="real_estate"]) .option-grid{
-      grid-template-columns:repeat(2,minmax(0,1fr));
-    }
-
-    #questionWrap:has(.option[data-value="real_estate"]) .option{
-      min-height:72px;
-      text-align:center;
-      padding:12px 10px;
-      line-height:1.35;
-    }
-
-    .survey-actions{
-      display:flex;
-      justify-content:space-between;
-      gap:10px;
-      margin-top:28px;
-    }
-
-    .survey-msg{
-      min-height:22px;
-      margin-top:12px;
-      color:var(--danger);
-      font-size:13px;
-    }
-
-    .survey-success{display:none}
-    .survey-success.show{display:block}
-
-    .survey-success h3{
-      font-size:clamp(30px,4vw,44px);
-      line-height:1.1;
-      letter-spacing:-.04em;
-    }
-
-    .survey-summary{
-      margin-top:22px;
-      padding:16px;
-      border:1px solid var(--line);
-      border-radius:12px;
-      background:#F7F7F9;
-      display:grid;
-      gap:9px;
-    }
-
-    .summary-row{
-      display:grid;
-      grid-template-columns:110px 1fr;
-      gap:12px;
-      font-size:13px;
-    }
-
-    .summary-row span:first-child{color:var(--subtle)}
-
-    /* PROBLEM */
-    .problem-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-    }
-
-    .problem-card{
-      min-height:430px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      padding:24px;
-      border:1px solid var(--line);
-      border-radius:var(--radius-card);
-      background:#fff;
-      overflow:hidden;
-      position:relative;
-      box-shadow:0 12px 28px rgba(0,0,0,.035);
-    }
-
-    .problem-card:nth-child(1){background:linear-gradient(160deg,#FFFFFF,#F3F4F8)}
-    .problem-card:nth-child(2){background:linear-gradient(160deg,#FFFFFF,#F4F5EF)}
-
-    .problem-kicker{
-      display:flex;
-      justify-content:space-between;
-      gap:16px;
-      color:#74747A;
-      font-size:12px;
-      font-weight:700;
-    }
-
-    .problem-visual{
-      margin:26px 0 24px;
-      min-height:270px;
-      border-radius:14px;
-      border:1px solid rgba(17,17,19,.07);
-      overflow:hidden;
-      background:#fff;
-    }
-
-    .problem-photo{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
-    .problem-card h3{
-      font-size:clamp(28px,3vw,40px);
-      line-height:1.08;
-      letter-spacing:-.04em;
-      font-weight:600;
-    }
-
-    .problem-card p{
-      margin-top:12px;
-      color:var(--muted);
-    }
-
-    /* HOW */
-    .how-panel{
-      padding:clamp(20px,3vw,34px);
-      border:1px solid var(--line);
-      border-radius:var(--radius-card);
-      background:linear-gradient(135deg,#ECEEFA,#F7F7F9 54%,#F0F2EA);
-      box-shadow:0 12px 28px rgba(0,0,0,.035);
-    }
-
-    .how-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:8px;
-    }
-
-    .how-step{
-      min-height:230px;
-      padding:20px;
-      border:1px solid rgba(17,17,19,.07);
-      border-radius:14px;
-      background:rgba(255,255,255,.94);
-      display:flex;
-      flex-direction:column;
-    }
-
-    .how-num{
-      color:var(--subtle);
-      font:700 11px/1 var(--font-en);
-      letter-spacing:.06em;
-    }
-
-    .how-icon{
-      width:44px;
-      height:44px;
-      margin-top:34px;
-      border-radius:12px;
-      display:grid;
-      place-items:center;
-      background:var(--surface-blue);
-      color:var(--cobalt);
-      font-weight:800;
-    }
-
-    .how-step:nth-child(3) .how-icon{
-      background:#FFF0F1;
-      color:var(--danger);
-    }
-
-    .how-step:nth-child(4) .how-icon{
-      background:var(--surface-green);
-      color:#677B2C;
-    }
-
-    .how-step h3{
-      margin-top:auto;
-      font-size:20px;
-      line-height:1.25;
-      letter-spacing:-.03em;
-    }
-
-    .how-step p{
-      margin-top:7px;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.5;
-    }
-
-    /* USE CASES */
-    .usecase-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:10px;
-    }
-
-    .usecase-card{
-      min-height:440px;
-      border:1px solid var(--line);
-      border-radius:var(--radius-card);
-      background:#fff;
-      padding:22px;
-      display:flex;
-      flex-direction:column;
-      box-shadow:0 12px 28px rgba(0,0,0,.03);
-    }
-
-    .usecase-top{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-      color:var(--subtle);
-      font:700 11px/1 var(--font-en);
-    }
-
-    .status-pill{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      padding:8px 10px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:#fff;
-      color:var(--muted);
-      font-size:11px;
-      font-weight:700;
-    }
-
-    .status-pill i{
-      width:7px;
-      height:7px;
-      border-radius:50%;
-      background:var(--signal);
-    }
-
-    .usecase-visual{
-      flex:none;
-      min-height:300px;
-      height:300px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin:18px 0 16px;
-      border-radius:14px;
-      border:1px solid rgba(17,17,19,.07);
-      overflow:hidden;
-      background:#fff;
-    }
-
-    .usecase-image{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
-    .usecase-card h3{
-      font-size:clamp(26px,2.6vw,36px);
-      line-height:1.08;
-      letter-spacing:-.04em;
-      font-weight:600;
-    }
-
-    .usecase-card>p{
-      margin-top:12px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    /* TRUST */
-    .trust-grid{
-      display:grid;
-      grid-template-columns:.9fr 1.1fr;
-      gap:clamp(34px,6vw,84px);
-      align-items:start;
-    }
-
-    .trust-copy p{
-      margin-top:20px;
-      color:var(--muted);
-      max-width:570px;
-    }
-
-    .trust-list{
-      border-top:1px solid var(--line-strong);
-    }
-
-    .trust-item{
-      display:grid;
-      grid-template-columns:52px 1fr;
-      gap:18px;
-      padding:22px 0;
-      border-bottom:1px solid var(--line-strong);
-    }
-
-    .trust-index{
-      font:700 12px/1 var(--font-en);
-      color:var(--subtle);
-      padding-top:6px;
-    }
-
-    .trust-item h3{
-      font-size:22px;
-      line-height:1.25;
-      letter-spacing:-.03em;
-    }
-
-    .trust-item p{
-      margin-top:7px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    /* FAQ */
-    .faq-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:9px;
-    }
-
-    .faq-item{
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:#fff;
-      padding:0 16px;
-      box-shadow:0 8px 20px rgba(0,0,0,.025);
-    }
-
-    .faq-question{
-      width:100%;
-      min-height:64px;
-      border:0;
-      background:transparent;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      text-align:left;
-      font-weight:650;
-      color:var(--text);
-    }
-
-    .faq-question b{
-      color:var(--subtle);
-      font-size:22px;
-      font-weight:500;
-      transition:transform .2s var(--ease);
-    }
-
-    .faq-item.open .faq-question b{transform:rotate(45deg)}
-
-    .faq-answer{
-      display:none;
-      padding:0 0 17px;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.65;
-    }
-
-    .faq-item.open .faq-answer{display:block}
-
-    /* FINAL CTA */
-    .final-cta{
-      padding:46px 0 clamp(92px,9vw,130px);
-    }
-
-    .final-box{
-      display:grid;
-      grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);
-      gap:34px;
-      align-items:end;
-      padding:clamp(28px,5vw,56px);
-      border:1px solid var(--line);
-      border-radius:var(--radius-media);
-      background:linear-gradient(135deg,#ECEEFA,#F7F7F9 56%,#EFF1E8);
-    }
-
-    .final-box h2{
-      font-size:clamp(44px,6vw,80px);
-      line-height:.99;
-      letter-spacing:-.055em;
-      font-weight:650;
-      text-wrap:balance;
-    }
-
-    .final-side p{
-      color:var(--muted);
-      max-width:470px;
-      margin-bottom:22px;
-    }
-
-    /* FOOTER */
-    .footer{
-      border-top:1px solid var(--line);
-      padding:22px 0 34px;
-      color:var(--subtle);
-      font-size:12px;
-      background:#EFEFF1;
-    }
-
-    .footer-inner{
-      display:flex;
-      justify-content:space-between;
-      gap:18px;
-      align-items:center;
-    }
-
-    .footer-links{
-      display:flex;
-      gap:16px;
-    }
-
-    .footer-links a{
-      color:var(--subtle);
-      text-decoration:none;
-    }
-
-    .footer-links a:hover{color:var(--text)}
-
-    /* MOBILE STICKY */
-    .mobile-sticky{display:none}
-
-    .reveal{
-      opacity:0;
-      transform:translateY(18px);
-      transition:opacity .65s var(--ease),transform .65s var(--ease);
-    }
-
-    .reveal.visible{
-      opacity:1;
-      transform:none;
-    }
-
-    @media(max-width:1000px){
-      .nav-links{display:none}
-
-      .survey-shell,
-      .trust-grid,
-      .final-box{
-        grid-template-columns:1fr;
-      }
-
-      .survey-intro{position:static}
-      .how-grid{grid-template-columns:1fr 1fr}
-      .usecase-grid{grid-template-columns:1fr}
-      .usecase-card{min-height:auto}
-    }
-
-    @media(max-width:767px){
-      :root{
-        --page-pad:clamp(16px,5vw,22px);
-        --header-h:56px;
-      }
-
-      .section{padding:58px 0 64px}
-
-      .nav{min-height:56px}
-      .brand-logo{height:24px}
-      .nav .btn{display:none}
-
-      /* MOBILE HERO — 핵심 HTML과 동일 */
-      .hero{padding:16px 0 30px}
-
-      .hero-single{width:100%}
-
-      .hero-shell-embedded{
-        position:relative;
-        width:100%;
-        min-height:0;
-        aspect-ratio:4 / 5;
-        border-radius:18px;
-        overflow:hidden;
-      }
-
-      .hero-image-embedded{
-        object-fit:cover;
-        object-position:15% top;
-      }
-
-      .hero-embedded-veil{
-        background:linear-gradient(
-          180deg,
-          rgba(11,15,22,0) 0%,
-          rgba(11,15,22,0) 34%,
-          rgba(11,15,22,.28) 58%,
-          rgba(11,15,22,.72) 82%,
-          rgba(11,15,22,.86) 100%
-        );
-      }
-
-      .hero-embedded-overlay{
-        position:absolute;
-        inset:0;
-        width:100%;
-        height:100%;
-        min-height:0;
-        display:flex;
-        flex-direction:column;
-        justify-content:flex-end;
-        align-items:stretch;
-        padding:16px 15px 15px;
-      }
-
-      .hero-embedded-copy{
-        position:static;
-        width:100%;
-        max-width:none;
-        padding:0;
-        background:none;
-        border-radius:0;
-        backdrop-filter:none;
-        -webkit-backdrop-filter:none;
-      }
-
-      .hero-embedded-copy .eyebrow{display:none}
-
-      .hero .hero-embedded-copy h1{
-        width:100%;
-        max-width:100%;
-        margin:0;
-        color:#fff;
-        font-size:clamp(25px,7.2vw,34px);
-        line-height:1.06;
-        letter-spacing:-.03em;
-        font-weight:800;
-        text-align:left;
-        text-wrap:balance;
-        text-shadow:0 2px 14px rgba(0,0,0,.45);
-      }
-
-      .hero .hero-embedded-copy h1 .soft{
-        display:block;
-        margin-top:6px;
-        color:rgba(255,255,255,.90);
-        font-size:.60em;
-        line-height:1.14;
-        font-weight:650;
-        letter-spacing:-.01em;
-      }
-
-      .hero-status-card{
-        width:100%;
-        margin:12px 0 0;
-        display:grid;
-        grid-template-columns:30px minmax(0,1fr);
-        gap:10px;
-        align-items:center;
-        padding:10px 12px;
-        border-radius:13px;
-        background:rgba(255,255,255,.94);
-        border:1px solid rgba(17,17,19,.08);
-        backdrop-filter:blur(10px);
-        -webkit-backdrop-filter:blur(10px);
-        box-shadow:0 8px 22px rgba(0,0,0,.18);
-      }
-
-      .hero-status-icon{
-        width:30px;
-        height:30px;
-        border-radius:8px;
-        font-size:14px;
-      }
-
-      .hero-status-card strong{
-        font-size:12px;
-        line-height:1.18;
-        letter-spacing:-.01em;
-      }
-
-      .hero-status-card p{
-        margin-top:2px;
-        font-size:10.5px;
-        line-height:1.24;
-      }
-
-      .hero-actions-below{
-        display:grid;
-        grid-template-columns:1fr;
-        gap:8px;
-        width:100%;
-        margin-top:14px;
-      }
-
-      .hero-actions-below .btn-primary{
-        width:100%;
-        min-height:48px;
-      }
-
-      .hero-actions-below .btn-secondary{display:none}
-
-      .hero-actions-below .hero-note{
-        width:100%;
-        margin:0;
-        text-align:center;
-        font-size:10.5px;
-        line-height:1.35;
-      }
-
-      .section-head{
-        grid-template-columns:1fr;
-        gap:14px;
-        margin-bottom:22px;
-      }
-
-      .section-head h2,
-      .survey-intro h2,
-      .trust-copy h2,
-      .faq-head h2{
-        font-size:clamp(33px,9vw,44px);
-      }
-
-      .section-head>p{justify-self:start}
-
-      /* SURVEY compact */
-      #survey.section{padding:48px 0 54px}
-      #survey .survey-shell{gap:18px}
-
-      #survey .survey-intro h2{
-        margin-top:10px;
-        font-size:clamp(31px,8.5vw,39px);
-        line-height:1.05;
-      }
-
-      #survey .survey-intro p{
-        margin-top:10px;
-        font-size:13px;
-        line-height:1.48;
-      }
-
-      #survey .survey-meta{
-        gap:6px;
-        margin-top:12px;
-      }
-
-      #survey .meta-chip{
-        padding:6px 8px;
-        font-size:10px;
-      }
-
-      #survey .survey-card{
-        padding:14px 14px 12px;
-        border-radius:14px;
-      }
-
-      #survey .survey-progress{
-        gap:10px;
-        margin-bottom:14px;
-        font-size:10px;
-      }
-
-      #survey .progress-track{height:4px}
-
-      #survey .survey-question h3{
-        font-size:clamp(22px,6.2vw,28px);
-        line-height:1.15;
-        letter-spacing:-.035em;
-      }
-
-      #survey .survey-help{
-        margin-top:5px;
-        font-size:11.5px;
-        line-height:1.4;
-      }
-
-      #survey .option-grid{
-        gap:7px;
-        margin-top:12px;
-      }
-
-      #survey .option{
-        min-height:44px;
-        padding:9px 10px;
-        border-radius:9px;
-        font-size:13px;
-        line-height:1.3;
-      }
-
-      #questionWrap:has(.option[data-value="real_estate"]) .option-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-
-      #questionWrap:has(.option[data-value="real_estate"]) .option{
-        min-height:58px;
-        text-align:left;
-        padding:10px;
-      }
-
-      #survey .survey-actions{margin-top:14px}
-
-      #survey .survey-actions .btn{
-        min-height:42px;
-        padding-inline:14px;
-        font-size:13px;
-      }
-
-      #survey .survey-msg{
-        min-height:16px;
-        margin-top:6px;
-        font-size:11px;
-        line-height:1.35;
-      }
-
-      .problem-grid{grid-template-columns:1fr}
-      .problem-card{min-height:0;padding:18px}
-      .problem-visual{min-height:230px;margin:20px 0}
-
-      #how.section{padding:56px 0 60px}
-      #how .section-head{margin-bottom:18px}
-
-      #how .section-head h2{
-        font-size:clamp(32px,8.7vw,40px);
-        line-height:1.05;
-      }
-
-      #how .section-head>p{
-        font-size:13px;
-        line-height:1.5;
-      }
-
-      #how .how-panel{
-        padding:8px;
-        border-radius:16px;
-      }
-
-      #how .how-grid{
-        display:block;
-        overflow:hidden;
-        border:1px solid rgba(17,17,19,.07);
-        border-radius:13px;
-        background:rgba(255,255,255,.94);
-      }
-
-      #how .how-step{
-        min-height:0;
-        padding:12px;
-        border:0;
-        border-radius:0;
-        background:transparent;
-        display:grid;
-        grid-template-columns:26px 38px minmax(0,1fr);
-        grid-template-areas:
-          "num icon title"
-          "num icon desc";
-        column-gap:10px;
-        row-gap:2px;
-        align-items:center;
-      }
-
-      #how .how-step + .how-step{
-        border-top:1px solid var(--line);
-      }
-
-      #how .how-num{
-        grid-area:num;
-        align-self:start;
-        padding-top:5px;
-        font-size:10px;
-      }
-
-      #how .how-icon{
-        grid-area:icon;
-        width:36px;
-        height:36px;
-        margin:0;
-        border-radius:10px;
-        font-size:13px;
-      }
-
-      #how .how-step h3{
-        grid-area:title;
-        margin:0;
-        font-size:16px;
-        line-height:1.28;
-        letter-spacing:-.025em;
-      }
-
-      #how .how-step p{
-        grid-area:desc;
-        margin:2px 0 0;
-        font-size:12px;
-        line-height:1.4;
-      }
-
-      #usecases.section{padding:56px 0 60px}
-      #usecases .section-head{gap:12px;margin-bottom:18px}
-
-      #usecases .section-head h2{
-        font-size:clamp(32px,8.7vw,40px);
-        line-height:1.05;
-      }
-
-      #usecases .section-head>p{
-        font-size:13px;
-        line-height:1.48;
-      }
-
-      #usecases .usecase-grid{gap:8px}
-
-      #usecases .usecase-card{
-        min-height:0;
-        padding:14px 15px 15px;
-        border-radius:14px;
-      }
-
-      #usecases .usecase-top{font-size:10px}
-
-      #usecases .status-pill{
-        gap:5px;
-        padding:6px 8px;
-        font-size:10px;
-      }
-
-      #usecases .status-pill i{
-        width:6px;
-        height:6px;
-      }
-
-      #usecases .usecase-visual{
-        min-height:260px;
-        height:260px;
-        margin:12px 0 13px;
-      }
-
-      #usecases .usecase-card h3{
-        font-size:22px;
-        line-height:1.13;
-        letter-spacing:-.035em;
-      }
-
-      #usecases .usecase-card>p{
-        margin-top:7px;
-        font-size:12.5px;
-        line-height:1.43;
-      }
-
-      .summary-row{grid-template-columns:90px 1fr}
-      .faq-grid{grid-template-columns:1fr}
-
-      .final-box{padding:22px}
-      .final-box h2{font-size:clamp(38px,11vw,52px)}
-
-      .footer{
-        padding-bottom:calc(96px + env(safe-area-inset-bottom));
-      }
-
-      .footer-inner{display:grid}
-
-      .mobile-sticky{
-        position:fixed;
-        left:12px;
-        right:12px;
-        bottom:calc(10px + env(safe-area-inset-bottom));
-        z-index:45;
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        gap:10px;
-        padding:6px 6px 6px 13px;
-        border:1px solid rgba(17,17,19,.09);
-        border-radius:14px;
-        background:rgba(255,255,255,.92);
-        backdrop-filter:blur(16px);
-        box-shadow:0 14px 38px rgba(0,0,0,.10);
-        transform:translateY(140%);
-        transition:transform .3s var(--ease);
-      }
-
-      .mobile-sticky.show{transform:none}
-
-      .mobile-sticky small{
-        color:var(--muted);
-        font-size:11px;
-        font-weight:650;
-        line-height:1.35;
-        max-width:165px;
-      }
-
-      .mobile-sticky .btn{
-        min-height:42px;
-        padding-inline:14px;
-        font-size:12px;
-      }
-    }
-
-    @media(max-width:767px) and (orientation:landscape){
-      .hero-shell-embedded{aspect-ratio:16 / 9}
-      .hero-image-embedded{object-position:center 30%}
-      .hero .hero-embedded-copy h1{font-size:clamp(22px,5vw,30px)}
-    }
-
-    @media(max-width:380px){
-      .hero-embedded-overlay{padding:14px 13px 13px}
-      .hero .hero-embedded-copy h1{font-size:clamp(24px,7.6vw,30px)}
-      .hero-status-card strong{font-size:11.5px}
-      .hero-status-card p{font-size:10px}
-
-      #how .how-step{
-        grid-template-columns:23px 34px minmax(0,1fr);
-        padding:11px;
-        column-gap:8px;
-      }
-
-      #how .how-icon{width:34px;height:34px}
-      #how .how-step h3{font-size:15px}
-      #survey .survey-card{padding:13px 12px}
-      #survey .option{padding:8px 9px;font-size:12.5px}
-      #usecases .usecase-card h3{font-size:21px}
-    }
-
-    @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *,*::before,*::after{
-        animation-duration:.01ms!important;
-        animation-iteration-count:1!important;
-        transition-duration:.01ms!important;
-      }
-      .reveal{
-        opacity:1;
-        transform:none;
-      }
-    }
-  </style>
+<script>window.SITE_ID = 'fr-ai-call-assistant';</script>
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="cced738a-fa5f-4aff-8391-a37454d4b7ab" data-blockingmode="auto" type="text/javascript"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#F5F5F7" />
+<title>Assistant téléphonique IA — Vous ne pouvez pas décrocher ? L’IA répond à votre place.</title>
+<meta name="description" content="Vous ne pouvez pas décrocher ? L’IA répond à votre place, informe votre interlocuteur, suit vos consignes pour les demandes simples et vous envoie un résumé." />
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --bg:#F5F5F7;--surface:#FFFFFF;--surface-soft:#EFEFF1;--surface-blue:#EEF2FF;--surface-green:#F3F6E9;
+  --ink:#111113;--text:#1D1D1F;--muted:#6E6E73;--subtle:#8E8E93;--line:#D9D9DE;--line-strong:#C7C7CC;
+  --cobalt:#4664FF;--cobalt-hover:#3855EF;--signal:#C9FF57;--danger:#E95360;--success:#229B6D;
+  --radius-control:10px;--radius-button:12px;--radius-card:18px;--radius-media:22px;
+  --page-pad:clamp(16px,4vw,56px);--max:1320px;--ease:cubic-bezier(.16,1,.3,1);--header-h:64px;
+  --font-ko:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-en:"Manrope","Pretendard Variable",Pretendard,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg);-webkit-text-size-adjust:100%}
+body{min-width:0;overflow-x:hidden;background:var(--bg);color:var(--text);font-family:var(--font-en);font-size:16px;line-height:1.6;letter-spacing:-.018em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,p,button,a{word-break:normal;overflow-wrap:anywhere;hyphens:auto}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}img{display:block;width:100%;max-width:100%}button,a{-webkit-tap-highlight-color:transparent}:focus-visible{outline:3px solid rgba(70,100,255,.26);outline-offset:3px}
+.container{width:min(100%,var(--max));margin-inline:auto;padding-inline:var(--page-pad)}
+.section{padding:clamp(76px,9vw,136px) 0}.section-soft{background:#EFEFF1}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--muted);font:700 12px/1 var(--font-ko);letter-spacing:-.01em;text-transform:none}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 5px rgba(201,255,87,.13)}
+.section-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:30px;align-items:end;margin-bottom:30px}
+.section-head h2,.survey-intro h2,.trust-copy h2,.faq-head h2{margin-top:14px;color:var(--ink);font-size:clamp(38px,5.3vw,72px);line-height:1.02;letter-spacing:-.05em;font-weight:620;text-wrap:balance}
+.section-head>p{justify-self:end;max-width:430px;color:var(--muted);font-size:15px;line-height:1.65}
+.btn{min-height:48px;border:1px solid transparent;border-radius:var(--radius-button);padding:0 18px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:650;transition:background .2s var(--ease),border-color .2s var(--ease),transform .2s var(--ease),color .2s var(--ease)}
+.btn:active{transform:translateY(1px)}.btn-primary{background:var(--cobalt);color:#fff}.btn-primary:hover{background:var(--cobalt-hover)}.btn-secondary{background:#fff;color:var(--text);border-color:var(--line-strong)}.btn-secondary:hover{background:#F8F8FA}.btn[disabled]{cursor:not-allowed;opacity:.45}
+.header{position:sticky;top:0;z-index:50;background:rgba(245,245,247,.88);border-bottom:1px solid rgba(17,17,19,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.nav{min-height:var(--header-h);display:flex;align-items:center;gap:18px}.brand{color:var(--ink);font:800 22px/1 var(--font-en);letter-spacing:-.03em;white-space:nowrap}.brand .accent{color:var(--cobalt)}
+.nav-links{display:flex;align-items:center;gap:22px;margin-left:28px;color:var(--muted);font-size:13px;font-weight:650}.nav-actions{margin-left:auto;display:flex;align-items:center;gap:10px}.nav .btn{min-height:40px;padding-inline:14px;font-size:13px}
+.hero{position:relative;padding:clamp(54px,6.5vw,92px) 0 clamp(48px,6vw,78px);overflow:hidden;background:radial-gradient(circle at 80% 8%,rgba(70,100,255,.08),transparent 26%),radial-gradient(circle at 16% 78%,rgba(201,255,87,.07),transparent 20%),linear-gradient(180deg,#FBFBFD,#F5F5F7)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(340px,.84fr);gap:clamp(34px,6vw,86px);align-items:center}.hero-copy{max-width:820px;min-width:0}.hero .eyebrow{margin-bottom:20px}
+.hero h1{max-width:940px;color:var(--ink);font-size:clamp(54px,7.2vw,106px);line-height:.94;letter-spacing:-.062em;font-weight:650;text-wrap:balance}.hero h1 .soft{display:block;color:#75757A;font-weight:520}
+.hero-sub{max-width:720px;margin-top:24px;color:var(--muted);font-size:clamp(17px,1.55vw,21px);line-height:1.6}.hero-sub-secondary{max-width:720px;margin-top:10px;color:#5C5C62;font-size:clamp(15px,1.25vw,18px);line-height:1.6;font-weight:560}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:28px}.hero-note{width:100%;color:var(--subtle);font-size:13px;font-weight:600}
+.hero-side{min-width:0}.video-shell{position:relative;min-height:520px;overflow:hidden;border:1px solid #D8D8DC;border-radius:var(--radius-media);background:radial-gradient(circle at 50% 14%,rgba(70,100,255,.11),transparent 28%),linear-gradient(145deg,#ECECF0,#E2E2E7);box-shadow:0 18px 45px rgba(0,0,0,.055)}
+.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.video-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.02) 40%,rgba(16,20,30,.36) 100%);pointer-events:none}
+.risk-toast{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:15px;border-radius:14px;background:rgba(255,255,255,.94);border:1px solid rgba(17,17,19,.09);backdrop-filter:blur(16px);box-shadow:0 14px 36px rgba(0,0,0,.08)}
+.risk-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--surface-blue);color:var(--cobalt);font-weight:800}.risk-toast strong{display:block;font-size:14px;line-height:1.35}.risk-toast p{margin-top:3px;color:var(--muted);font-size:12px;line-height:1.4}.risk-state{display:inline-flex;align-items:center;gap:7px;color:#424248;font-size:11px;font-weight:700;white-space:nowrap}.risk-state i{width:8px;height:8px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 4px rgba(201,255,87,.18)}
+.hero-zeros{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;padding-top:0;border-top:0}.hero-zeros span{display:inline-flex;align-items:center;padding:9px 14px;border:1px solid var(--line-strong);border-radius:999px;background:#fff;color:var(--text);font-size:13px;font-weight:650}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.problem-card{min-height:430px;display:flex;flex-direction:column;justify-content:flex-start;padding:24px;border:1px solid var(--line);border-radius:var(--radius-card);background:#fff;overflow:hidden;position:relative;box-shadow:0 12px 28px rgba(0,0,0,.035)}.problem-card:nth-child(1){background:linear-gradient(160deg,#FFFFFF,#F3F4F8)}.problem-card:nth-child(2){background:linear-gradient(160deg,#FFFFFF,#F4F5EF)}.problem-kicker{display:flex;justify-content:space-between;gap:16px;color:#74747A;font-size:12px;font-weight:700}.problem-visual{margin:26px 0 24px;aspect-ratio:4/3;min-height:0;border-radius:14px;border:1px solid rgba(17,17,19,.07);background:#fff;display:grid;place-items:center;position:relative;overflow:hidden}.problem-photo{width:100%;height:100%;object-fit:cover;display:block}.problem-card h3{font-size:clamp(28px,3vw,40px);line-height:1.08;letter-spacing:-.04em;font-weight:600;max-width:620px}.problem-card p{margin-top:12px;color:var(--muted);max-width:560px}
+.how-panel{padding:clamp(20px,3vw,34px);border:1px solid var(--line);border-radius:var(--radius-card);background:linear-gradient(135deg,#ECEEFA,#F7F7F9 54%,#F0F2EA);box-shadow:0 12px 28px rgba(0,0,0,.035)}.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.how-step{min-height:230px;padding:20px;border:1px solid rgba(17,17,19,.07);border-radius:14px;background:rgba(255,255,255,.94);display:flex;flex-direction:column}.how-num{color:var(--subtle);font:700 11px/1 var(--font-en);letter-spacing:.06em}.how-icon{width:44px;height:44px;margin-top:34px;border-radius:12px;display:grid;place-items:center;background:var(--surface-blue);color:var(--cobalt);font-weight:800}.how-step:nth-child(3) .how-icon{background:var(--surface-blue);color:var(--cobalt)}.how-step:nth-child(4) .how-icon{background:var(--surface-green);color:#677B2C}.how-step h3{margin-top:auto;font-size:20px;line-height:1.25;letter-spacing:-.03em}.how-step p{margin-top:7px;color:var(--muted);font-size:13px;line-height:1.5}
+.survey{background:#F2F2F4;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.survey-shell{display:grid;grid-template-columns:minmax(260px,.64fr) minmax(0,1.36fr);gap:clamp(34px,6vw,78px);align-items:start}.survey-intro{position:sticky;top:calc(var(--header-h) + 28px)}.survey-intro h2{font-size:clamp(40px,4.8vw,64px)}.survey-intro p{margin-top:18px;color:var(--muted);max-width:430px}.survey-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.meta-chip{padding:8px 10px;border:1px solid var(--line-strong);border-radius:999px;background:rgba(255,255,255,.68);color:var(--muted);font-size:11px;font-weight:700}.survey-card{min-width:0;padding:clamp(20px,3vw,34px);border:1px solid var(--line-strong);border-radius:var(--radius-card);background:#fff;box-shadow:0 16px 36px rgba(0,0,0,.045);overflow:hidden}.survey-progress{display:flex;align-items:center;gap:16px;margin-bottom:28px;color:var(--subtle);font:700 12px/1 var(--font-en)}.progress-track{flex:1;height:5px;border-radius:999px;background:#EBEBEF;overflow:hidden}.progress-bar{height:100%;width:33.333%;background:var(--cobalt);border-radius:inherit;transition:width .3s var(--ease)}#questionViewport{position:relative;overflow:hidden;transition:height .34s var(--ease)}.survey-question{display:block}.survey-question.enter-right{animation:qInRight .32s var(--ease) both}.survey-question.enter-left{animation:qInLeft .32s var(--ease) both}@keyframes qInRight{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}@keyframes qInLeft{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:none}}.survey-question h3{font-size:clamp(27px,3.4vw,42px);line-height:1.14;letter-spacing:-.04em;font-weight:600}.survey-help{margin-top:10px;color:var(--muted);font-size:14px}.option-grid{display:grid;grid-template-columns:1fr;gap:9px;margin-top:24px}.option{min-height:62px;border:1px solid var(--line-strong);border-radius:var(--radius-control);background:#FCFCFD;color:var(--text);padding:14px 15px;text-align:left;font-weight:620;transition:background .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease),transform .18s var(--ease)}.option:hover{border-color:rgba(70,100,255,.40);background:#F7F8FF}.option:active{transform:scale(.99)}.option.selected{border-color:var(--cobalt);background:var(--surface-blue);box-shadow:inset 0 0 0 1px var(--cobalt)}.survey-actions{display:flex;justify-content:space-between;gap:10px;margin-top:28px}.survey-msg{min-height:22px;margin-top:12px;color:var(--danger);font-size:13px}.survey-success{display:none}.survey-success.show{display:block}.survey-success h3{font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.04em}.survey-success p{margin-top:14px;color:var(--muted)}.survey-summary{margin-top:22px;padding:16px;border:1px solid var(--line);border-radius:12px;background:#F7F7F9;display:grid;gap:10px}.summary-row{display:grid;grid-template-columns:120px 1fr;gap:12px;font-size:13px}.summary-row span:first-child{color:var(--subtle)}.hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.usecase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.usecase-card{min-height:440px;border:1px solid var(--line);border-radius:var(--radius-card);background:#fff;padding:22px;display:flex;flex-direction:column;box-shadow:0 12px 28px rgba(0,0,0,.03)}.usecase-card:nth-child(2){background:#F7F7F9}.usecase-card:nth-child(3){background:#F4F5EE}.usecase-top{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--subtle);font:700 11px/1 var(--font-en)}.status-pill{display:inline-flex;align-items:center;gap:7px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);font-size:11px;font-weight:700}.status-pill i{width:7px;height:7px;border-radius:50%;background:var(--signal)}.usecase-visual{flex:none;min-height:300px;height:300px;display:flex;align-items:center;justify-content:center;margin:18px 0 16px;border-radius:14px;border:1px solid rgba(17,17,19,.07);overflow:hidden;background:#fff}.usecase-photo{width:100%;height:100%;object-fit:cover;display:block}.usecase-card h3{font-size:clamp(26px,2.6vw,36px);line-height:1.08;letter-spacing:-.04em;font-weight:600}.usecase-card>p{margin-top:12px;color:var(--muted);font-size:14px}
+.trust-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(34px,6vw,84px);align-items:start}.trust-copy p{margin-top:20px;color:var(--muted);max-width:560px}.trust-list{border-top:1px solid var(--line-strong)}.trust-item{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line-strong)}.trust-index{font:700 12px/1 var(--font-en);color:var(--subtle);padding-top:6px}.trust-item h3{font-size:22px;line-height:1.25;letter-spacing:-.03em}.trust-item p{margin-top:7px;color:var(--muted);font-size:14px}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.faq-item{border:1px solid var(--line);border-radius:14px;background:#fff;padding:0 16px;box-shadow:0 8px 20px rgba(0,0,0,.025)}.faq-question{width:100%;min-height:64px;border:0;background:transparent;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;font-weight:650;color:var(--text)}.faq-question b{color:var(--subtle);font-size:22px;font-weight:500;transition:transform .2s var(--ease)}.faq-item.open .faq-question b{transform:rotate(45deg)}.faq-answer{display:none;padding:0 0 17px;color:var(--muted);font-size:14px;line-height:1.65}.faq-item.open .faq-answer{display:block}
+.final-cta{padding:46px 0 clamp(92px,9vw,130px)}.final-box{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:34px;align-items:end;padding:clamp(28px,5vw,56px);border:1px solid var(--line);border-radius:var(--radius-media);background:linear-gradient(135deg,#ECEEFA,#F7F7F9 56%,#EFF1E8)}.final-box h2{font-size:clamp(44px,6vw,82px);line-height:.98;letter-spacing:-.055em;font-weight:620;text-wrap:balance}.final-side p{color:var(--muted);max-width:470px;margin-bottom:22px}.footer{border-top:1px solid var(--line);padding:22px 0 34px;color:var(--subtle);font-size:12px;background:#EFEFF1}
+.footer-links{display:flex;gap:16px}.footer-links a{color:var(--subtle);text-decoration:none}.footer-links a:hover{color:var(--text)}.footer-inner{display:flex;justify-content:space-between;gap:18px;align-items:center}.mobile-sticky{display:none}.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s var(--ease),transform .65s var(--ease)}.reveal.visible{opacity:1;transform:none}
+@media(max-width:1000px){.nav-links{display:none}.hero-grid,.survey-shell,.trust-grid,.final-box{grid-template-columns:1fr}.hero h1{max-width:900px}.hero-side{max-width:760px}.survey-intro{position:static}.how-grid{grid-template-columns:1fr 1fr}.usecase-grid{grid-template-columns:1fr}.usecase-card{min-height:auto}}
+@media(max-width:767px){
+  :root{--page-pad:clamp(16px,5vw,22px);--header-h:56px}.section{padding:64px 0 72px}.nav{min-height:56px}.brand{font-size:20px}.nav .btn{display:none}.hero{padding:44px 0 48px}.hero-grid{display:flex;flex-direction:column;gap:28px}.hero-copy,.hero-side{width:100%;min-width:0;max-width:none}.hero h1{font-size:clamp(42px,12vw,58px);line-height:.99;letter-spacing:-.052em}.hero-sub{font-size:16px}.hero-sub-secondary{font-size:14px}.hero-actions{margin-top:24px}.hero-actions .btn-secondary{display:none}.video-shell{width:100%;min-height:0;aspect-ratio:4/5}.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.risk-toast{left:12px;right:12px;bottom:12px;grid-template-columns:auto 1fr}.risk-state{grid-column:2}.hero-zeros{gap:7px;margin-top:18px}.hero-zeros span{font-size:11px;line-height:1.4;padding:7px 11px}.section-head{grid-template-columns:1fr;gap:14px;margin-bottom:22px}.section-head h2,.survey-intro h2,.trust-copy h2,.faq-head h2{font-size:clamp(34px,9.3vw,46px)}.section-head>p{justify-self:start}.problem-grid{grid-template-columns:1fr}.problem-card{min-height:0;padding:18px}.problem-visual{min-height:0;aspect-ratio:4/3;margin:20px 0}
+  #how.section{padding:56px 0 60px}#how .section-head{margin-bottom:18px}#how .section-head h2{font-size:clamp(32px,8.7vw,40px);line-height:1.05}#how .section-head>p{font-size:13px;line-height:1.5}#how .how-panel{padding:8px;border-radius:16px}#how .how-grid{display:block;overflow:hidden;border:1px solid rgba(17,17,19,.07);border-radius:13px;background:rgba(255,255,255,.94)}#how .how-step{min-height:0;padding:12px;border:0;border-radius:0;background:transparent;display:grid;grid-template-columns:26px 38px minmax(0,1fr);grid-template-areas:"num icon title" "num icon desc";column-gap:10px;row-gap:2px;align-items:center}#how .how-step + .how-step{border-top:1px solid var(--line)}#how .how-num{grid-area:num;align-self:start;padding-top:5px;font-size:10px}#how .how-icon{grid-area:icon;width:36px;height:36px;margin:0;border-radius:10px;font-size:13px}#how .how-step h3{grid-area:title;margin:0;font-size:16px;line-height:1.28;letter-spacing:-.025em}#how .how-step p{grid-area:desc;margin:2px 0 0;font-size:12px;line-height:1.4}
+  #survey.section{padding:52px 0 58px}#survey .survey-shell{gap:18px}#survey .survey-intro h2{margin-top:10px;font-size:clamp(32px,8.7vw,40px);line-height:1.05}#survey .survey-intro p{margin-top:10px;font-size:13px;line-height:1.48}#survey .survey-meta{gap:6px;margin-top:12px}#survey .meta-chip{padding:6px 8px;font-size:10px}#survey .survey-card{padding:14px 14px 12px;border-radius:14px}#survey .survey-progress{gap:10px;margin-bottom:14px;font-size:10px}#survey .progress-track{height:4px}#survey .survey-question h3{font-size:clamp(22px,6.2vw,28px);line-height:1.15;letter-spacing:-.035em}#survey .survey-help{margin-top:5px;font-size:11.5px;line-height:1.4}#survey .option-grid{gap:7px;margin-top:12px}#survey .option{min-height:44px;padding:9px 10px;border-radius:9px;font-size:13px;line-height:1.3}#survey .survey-actions{margin-top:14px}#survey .survey-actions .btn{min-height:42px;padding-inline:14px;font-size:13px}#survey .survey-msg{min-height:16px;margin-top:6px;font-size:11px;line-height:1.35}
+  #usecases.section{padding:56px 0 60px}#usecases .section-head{gap:12px;margin-bottom:18px}#usecases .section-head h2{font-size:clamp(32px,8.7vw,40px);line-height:1.05}#usecases .section-head>p{font-size:13px;line-height:1.48}#usecases .usecase-grid{gap:8px}#usecases .usecase-card{min-height:0;padding:14px 15px 15px;border-radius:14px}#usecases .usecase-top{font-size:10px}#usecases .status-pill{gap:5px;padding:6px 8px;font-size:10px}#usecases .status-pill i{width:6px;height:6px}#usecases .usecase-visual{min-height:260px;height:260px;margin:12px 0 13px}#usecases .usecase-card h3{font-size:22px;line-height:1.13;letter-spacing:-.035em}#usecases .usecase-card>p{margin-top:7px;font-size:12.5px;line-height:1.43}.summary-row{grid-template-columns:100px 1fr}.faq-grid{grid-template-columns:1fr}.final-box{padding:22px}.final-box h2{font-size:clamp(38px,11vw,52px)}.footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}.footer-inner{display:grid}.mobile-sticky{position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:45;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 6px 6px 13px;border:1px solid rgba(17,17,19,.09);border-radius:14px;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);box-shadow:0 14px 38px rgba(0,0,0,.10);transform:translateY(140%);transition:transform .3s var(--ease)}.mobile-sticky.show{transform:none}.mobile-sticky small{color:var(--muted);font-size:11px;font-weight:650;line-height:1.35;max-width:150px}.mobile-sticky .btn{min-height:42px;padding-inline:14px;font-size:12px}
+}
+@media(max-width:380px){.hero h1{font-size:40px}#how .how-step{grid-template-columns:23px 34px minmax(0,1fr);padding:11px;column-gap:8px}#how .how-icon{width:34px;height:34px}#how .how-step h3{font-size:15px}#survey .survey-card{padding:13px 12px}#survey .option{padding:8px 9px;font-size:12.5px}#usecases .usecase-card h3{font-size:21px}}
+
+/* HERO EMBEDDED — same structure as Protect / SOHO */
+.hero-single{display:block}
+.hero-shell-embedded{position:relative;overflow:hidden;border:1px solid #D8D8DC;border-radius:var(--radius-media);background:linear-gradient(145deg,#ECECF0,#E2E2E7);min-height:620px;box-shadow:0 18px 45px rgba(0,0,0,.055)}
+.hero-image-embedded{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:64% 38%}
+.hero-embedded-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,20,30,.72) 0%,rgba(16,20,30,.52) 16%,rgba(16,20,30,.26) 34%,rgba(16,20,30,.08) 50%,rgba(16,20,30,0) 64%,rgba(16,20,30,0) 100%);pointer-events:none}
+.hero-embedded-overlay{position:relative;z-index:2;min-height:620px;display:flex;justify-content:flex-start;align-items:center;padding:clamp(28px,4vw,44px)}
+.hero-embedded-copy{width:min(100%,430px);padding:18px 18px 4px;border-radius:20px;background:rgba(18,21,27,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-embedded-copy .eyebrow{margin-bottom:16px;color:rgba(255,255,255,.88)}
+.hero-embedded-copy .eyebrow::before{box-shadow:0 0 0 5px rgba(201,255,87,.10)}
+.hero .hero-embedded-copy h1{max-width:100%;color:#fff;font-size:clamp(40px,4.6vw,62px);line-height:1.02;letter-spacing:-.045em;font-weight:800;text-wrap:balance;text-shadow:0 10px 30px rgba(0,0,0,.22)}
+.hero .hero-embedded-copy h1 .soft{display:block;margin-top:10px;color:rgba(255,255,255,.86);font-weight:650}
+.hero-status-card{margin-top:18px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:15px;border-radius:15px;background:rgba(255,255,255,.93);border:1px solid rgba(17,17,19,.09);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 14px 36px rgba(0,0,0,.08)}
+.hero-status-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--surface-blue);color:var(--cobalt);font:800 15px/1 var(--font-en)}
+.hero-status-card strong{display:block;font-size:14px;line-height:1.35}.hero-status-card p{margin-top:3px;color:var(--muted);font-size:12px;line-height:1.4}
+.hero-actions-below{justify-content:center;margin-top:18px}.hero-actions-below .hero-note{text-align:center}
+
+@media(max-width:767px){
+  .hero{padding:16px 0 30px}
+  .hero-single{width:100%}
+  .hero-shell-embedded{position:relative;width:100%;min-height:0;aspect-ratio:4/5;border-radius:18px;overflow:hidden}
+  .hero-image-embedded{object-fit:cover;object-position:66% 12%}
+  .hero-embedded-veil{background:linear-gradient(180deg,rgba(11,15,22,0) 0%,rgba(11,15,22,0) 34%,rgba(11,15,22,.28) 58%,rgba(11,15,22,.72) 82%,rgba(11,15,22,.86) 100%)}
+  .hero-embedded-overlay{position:absolute;inset:0;width:100%;height:100%;min-height:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;padding:16px 15px 18px}
+  .hero-embedded-copy{position:static;width:min(100%,230px);max-width:230px;padding:12px 12px 0;background:rgba(16,20,30,.22);border-radius:14px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);margin-left:auto}
+  .hero-embedded-copy .eyebrow{display:none}
+  .hero .hero-embedded-copy h1{width:100%;max-width:100%;margin:0;color:#fff;font-size:clamp(24px,6.8vw,31px);line-height:1.06;letter-spacing:-.03em;font-weight:800;text-align:left;text-wrap:balance;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+  .hero .hero-embedded-copy h1 .soft{display:block;margin-top:6px;color:rgba(255,255,255,.90);font-size:.60em;line-height:1.14;font-weight:650;letter-spacing:-.01em}
+  .hero-status-card{width:min(100%,240px);margin:10px 0 0 auto;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:center;padding:10px 12px;border-radius:13px;background:rgba(255,255,255,.94);border:1px solid rgba(17,17,19,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+  .hero-status-icon{width:30px;height:30px;border-radius:8px;font-size:11px}
+  .hero-status-card strong{font-size:12px;line-height:1.18}.hero-status-card p{margin-top:2px;font-size:10.5px;line-height:1.24}
+  .hero-actions-below{display:grid;grid-template-columns:1fr;gap:8px;width:100%;margin-top:14px}
+  .hero-actions-below .btn-primary{width:100%;min-height:48px}.hero-actions-below .btn-secondary{display:none}.hero-actions-below .hero-note{width:100%;margin:0;text-align:center;font-size:10.5px;line-height:1.35}
+}
+@media(max-width:767px) and (orientation:landscape){.hero-shell-embedded{aspect-ratio:16/9}.hero-image-embedded{object-position:66% 24%}.hero .hero-embedded-copy h1{font-size:clamp(22px,5vw,30px)}}
+@media(max-width:380px){.hero-embedded-overlay{padding:14px 12px 14px}.hero .hero-embedded-copy h1{font-size:clamp(22px,7vw,28px)}.hero-status-card strong{font-size:11.5px}.hero-status-card p{font-size:10px}}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
-
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a aria-label="Accueil CALL X" class="brand" href="#top">
-        <img alt="CALL X" class="brand-logo" src="assets/callx-logo.svg"/>
-      </a>
-
-      <nav class="nav-links" aria-label="Navigation principale">
-        <a data-i18n="navSurvey" href="#survey"></a>
-        <a data-i18n="navHow" href="#how"></a>
-        <a data-i18n="navCases" href="#usecases"></a>
-      </nav>
-
-      <div class="nav-actions">
-        <a class="btn btn-primary" data-i18n="navCta" href="#survey"></a>
-      </div>
-    </div>
-  </header>
-
-  <main id="top">
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-single reveal">
-        <div class="hero-shell-embedded" aria-label="Illustration Standard téléphonique IA">
-          <img
-            class="hero-image-embedded"
-            src="assets/hero.png"
-            alt="Un professionnel reste concentré sur son activité pendant que l’IA prend le relais au téléphone"
-            fetchpriority="high"
-            decoding="async"
-          />
-
-          <div class="hero-embedded-veil"></div>
-
-          <div class="hero-embedded-overlay">
-            <div class="hero-embedded-copy">
-              <div class="eyebrow" data-i18n="heroEyebrow"></div>
-
-              <h1>
-                <span data-i18n="heroTitle1"></span>
-                <span class="soft" data-i18n="heroTitle2"></span>
-              </h1>
-
-              <div class="hero-status-card">
-                <div class="hero-status-icon">IA</div>
-                <div>
-                  <strong data-i18n="heroStatusTitle"></strong>
-                  <p data-i18n="heroStatusBody"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-actions hero-actions-below">
-          <a class="btn btn-primary" data-i18n="heroCta" href="#survey"></a>
-          <a class="btn btn-secondary" data-i18n="heroSecondary" href="#how"></a>
-          <p class="hero-note" data-i18n="heroNote"></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SURVEY — Hero 바로 아래 -->
-    <section class="section survey" id="survey">
-      <div class="container survey-shell">
-        <div class="survey-intro reveal">
-          <div class="eyebrow" data-i18n="surveyEyebrow"></div>
-          <h2 data-i18n="surveyTitle"></h2>
-          <p data-i18n="surveyDesc"></p>
-
-          <div class="survey-meta">
-            <span class="meta-chip" data-i18n="surveyMeta1"></span>
-            <span class="meta-chip" data-i18n="surveyMeta2"></span>
-            <span class="meta-chip" data-i18n="surveyMeta3"></span>
-          </div>
-        </div>
-
-        <div class="survey-card reveal">
-          <form id="surveyForm" novalidate>
-            <input
-              type="text"
-              id="website"
-              name="website"
-              tabindex="-1"
-              autocomplete="off"
-              aria-hidden="true"
-              style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"
-            />
-
-            <div class="survey-progress">
-              <span id="progressText">1 / 3</span>
-              <div class="progress-track">
-                <div class="progress-bar" id="progressBar"></div>
-              </div>
-            </div>
-
-            <div id="questionViewport">
-              <div id="questionWrap"></div>
-            </div>
-
-            <div class="survey-actions">
-              <button
-                class="btn btn-secondary"
-                data-i18n="prev"
-                disabled
-                id="prevBtn"
-                type="button">
-              </button>
-
-              <button
-                class="btn btn-primary"
-                data-i18n="next"
-                id="nextBtn"
-                type="button">
-              </button>
-            </div>
-
-            <p class="survey-msg" id="surveyMsg" role="alert"></p>
-          </form>
-
-          <div class="survey-success" id="surveySuccess">
-            <h3 data-i18n="localSuccessTitle"></h3>
-            <div class="survey-summary" id="surveySummary"></div>
-
-            <div style="margin-top:20px">
-              <button
-                class="btn btn-secondary"
-                data-i18n="reset"
-                id="resetSurvey"
-                type="button">
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROBLEM -->
-    <section class="section" id="problem">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow" data-i18n="problemEyebrow"></div>
-            <h2 data-i18n="problemTitle"></h2>
-          </div>
-
-          <p data-i18n="problemDesc"></p>
-        </div>
-
-        <div class="problem-grid">
-          <article class="problem-card reveal">
-            <div class="problem-kicker">
-              <span data-i18n="problem1Kicker"></span>
-              <span data-i18n="problem1State"></span>
-            </div>
-
-            <div class="problem-visual">
-              <img
-                alt="Une gérante de café sert une cliente pendant qu’un nouvel appel de réservation arrive"
-                class="problem-photo"
-                src="assets/problem-01.png"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            <div>
-              <h3 data-i18n="problem1Title"></h3>
-              <p data-i18n="problem1Desc"></p>
-            </div>
-          </article>
-
-          <article class="problem-card reveal">
-            <div class="problem-kicker">
-              <span data-i18n="problem2Kicker"></span>
-              <span data-i18n="problem2State"></span>
-            </div>
-
-            <div class="problem-visual">
-              <img
-                alt="Un plombier-chauffagiste répare une chaudière tout en répondant à des appels répétitifs"
-                class="problem-photo"
-                src="assets/problem-02.png"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            <div>
-              <h3 data-i18n="problem2Title"></h3>
-              <p data-i18n="problem2Desc"></p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW -->
-    <section class="section" id="how">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow" data-i18n="howEyebrow"></div>
-            <h2 data-i18n="howTitle"></h2>
-          </div>
-
-          <p data-i18n="howDesc"></p>
-        </div>
-
-        <div class="how-panel">
-          <div class="how-grid">
-            <article class="how-step reveal">
-              <span class="how-num">01</span>
-              <div class="how-icon">☎</div>
-              <h3 data-i18n="how1Title"></h3>
-              <p data-i18n="how1Desc"></p>
-            </article>
-
-            <article class="how-step reveal">
-              <span class="how-num">02</span>
-              <div class="how-icon">◎</div>
-              <h3 data-i18n="how2Title"></h3>
-              <p data-i18n="how2Desc"></p>
-            </article>
-
-            <article class="how-step reveal">
-              <span class="how-num">03</span>
-              <div class="how-icon">!</div>
-              <h3 data-i18n="how3Title"></h3>
-              <p data-i18n="how3Desc"></p>
-            </article>
-
-            <article class="how-step reveal">
-              <span class="how-num">04</span>
-              <div class="how-icon">+</div>
-              <h3 data-i18n="how4Title"></h3>
-              <p data-i18n="how4Desc"></p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- USE CASES -->
-    <section class="section" id="usecases">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow" data-i18n="casesEyebrow"></div>
-            <h2 data-i18n="casesTitle"></h2>
-          </div>
-
-          <p data-i18n="casesDesc"></p>
-        </div>
-
-        <div class="usecase-grid">
-          <article class="usecase-card reveal">
-            <div class="usecase-top">
-              <span>01</span>
-              <span class="status-pill">
-                <i></i>
-                <span data-i18n="case1Pill"></span>
-              </span>
-            </div>
-
-            <div class="usecase-visual">
-              <img
-                alt="Illustration d’une IA qui répond aux appels pendant qu’une commerçante sert un client dans un café"
-                class="usecase-image"
-                src="assets/usecase-01.jpg"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            <h3 data-i18n="case1Title"></h3>
-            <p data-i18n="case1Desc"></p>
-          </article>
-
-          <article class="usecase-card reveal">
-            <div class="usecase-top">
-              <span>02</span>
-              <span class="status-pill">
-                <i></i>
-                <span data-i18n="case2Pill"></span>
-              </span>
-            </div>
-
-            <div class="usecase-visual">
-              <img
-                alt="Illustration d’une IA qui répond aux questions sur les horaires et l’adresse pendant une prestation"
-                class="usecase-image"
-                src="assets/usecase-02.jpg"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            <h3 data-i18n="case2Title"></h3>
-            <p data-i18n="case2Desc"></p>
-          </article>
-
-          <article class="usecase-card reveal">
-            <div class="usecase-top">
-              <span>03</span>
-              <span class="status-pill">
-                <i></i>
-                <span data-i18n="case3Pill"></span>
-              </span>
-            </div>
-
-            <div class="usecase-visual">
-              <img
-                alt="Illustration d’une IA qui répond à un appel pendant la conduite et transmet les informations essentielles"
-                class="usecase-image"
-                src="assets/usecase-03.jpg"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            <h3 data-i18n="case3Title"></h3>
-            <p data-i18n="case3Desc"></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRUST -->
-    <section class="section section-soft" id="trust">
-      <div class="container trust-grid">
-        <div class="trust-copy reveal">
-          <div class="eyebrow" data-i18n="trustEyebrow"></div>
-          <h2 data-i18n="trustTitle"></h2>
-          <p data-i18n="trustDesc"></p>
-        </div>
-
-        <div class="trust-list">
-          <article class="trust-item reveal">
-            <span class="trust-index">01</span>
-            <div>
-              <h3 data-i18n="trust1Title"></h3>
-              <p data-i18n="trust1Desc"></p>
-            </div>
-          </article>
-
-          <article class="trust-item reveal">
-            <span class="trust-index">02</span>
-            <div>
-              <h3 data-i18n="trust2Title"></h3>
-              <p data-i18n="trust2Desc"></p>
-            </div>
-          </article>
-
-          <article class="trust-item reveal">
-            <span class="trust-index">03</span>
-            <div>
-              <h3 data-i18n="trust3Title"></h3>
-              <p data-i18n="trust3Desc"></p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section section-soft" id="faq">
-      <div class="container">
-        <div class="faq-head">
-          <div class="eyebrow">FAQ</div>
-          <h2 data-i18n="faqTitle"></h2>
-        </div>
-
-        <div class="faq-grid" style="margin-top:28px">
-          <div class="faq-item open">
-            <button class="faq-question" type="button">
-              <span data-i18n="faq1Q"></span>
-              <b>+</b>
-            </button>
-            <div class="faq-answer" data-i18n="faq1A"></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span data-i18n="faq2Q"></span>
-              <b>+</b>
-            </button>
-            <div class="faq-answer" data-i18n="faq2A"></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span data-i18n="faq3Q"></span>
-              <b>+</b>
-            </button>
-            <div class="faq-answer" data-i18n="faq3A"></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span data-i18n="faq4Q"></span>
-              <b>+</b>
-            </button>
-            <div class="faq-answer" data-i18n="faq4A"></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span data-i18n="faq5Q"></span>
-              <b>+</b>
-            </button>
-            <div class="faq-answer" data-i18n="faq5A"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="final-cta" id="final">
-      <div class="container">
-        <div class="final-box">
-          <div class="reveal">
-            <div class="eyebrow">STANDARD TÉLÉPHONIQUE IA POUR INDÉPENDANTS ET TPE</div>
-            <h2 data-i18n="finalTitle"></h2>
-          </div>
-
-          <div class="final-side reveal">
-            <p data-i18n="finalDesc"></p>
-            <a class="btn btn-primary" data-i18n="finalCta" href="#survey"></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© 2026 CALL X Inc.</span>
-
-      <nav class="footer-links">
-        <a href="https://callx-legal.vercel.app/privacy.html">
-          Politique de confidentialité
-        </a>
-        <a href="https://callx-legal.vercel.app/terms.html">
-          CGU
-        </a>
-      </nav>
-    </div>
-  </footer>
-
-  <div class="mobile-sticky" id="mobileSticky" aria-hidden="true">
-    <small data-i18n="stickyText"></small>
-    <a class="btn btn-primary" href="#survey" data-i18n="stickyCta"></a>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="Accueil CALL X">CALL <span class="accent">X</span></a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#survey">Sondage 1 min</a><a href="#problem">Pourquoi ce service</a><a href="#how">Comment ça marche</a><a href="#usecases">Exemples</a>
+    </nav>
+    <div class="nav-actions"><a class="btn btn-primary" href="#survey">Donner mon avis</a></div>
   </div>
-
-  <script>
-  (() => {
-    'use strict';
-
-    const I18N = {
-      ko:{
-        navHow:"이용 방법",
-        navSurvey:"의견 남기기",
-        navCases:"사용 장면",
-        navCta:"사전신청",
-
-        heroEyebrow:"AI PHONE ASSISTANT FOR SMALL BUSINESS",
-        heroTitle1:"하던 일에 집중하세요.",
-        heroTitle2:"전화 응대는 AI가 도와드려요.",
-        heroDesc:"손님 응대, 운전, 시술, 작업 중에도 걱정하지 마세요. AI가 가게 정보를 바탕으로 전화를 대신 받고, 중요한 내용만 정리해 알려드려요.",
-        heroCta:"사전신청",
-        heroSecondary:"어떻게 작동하나요?",
-        heroNote:"사전 신청하고 출시 소식을 가장 먼저 받아보세요.",
-        heroStatusTitle:"AI가 전화를 대신 받았어요",
-        heroStatusBody:"등록한 가게 정보를 기준으로 고객 용건을 확인하고 핵심 내용을 남겼어요.",
-
-        problemEyebrow:"WHY IT MATTERS",
-        problemTitle:"업무 흐름은 지키고, 새로운 고객의 연락도 놓치지 않게.",
-        problemDesc:"고객 전화가 예약·주문·상담으로 이어지는 소상공인에게는 전화를 못 받는 순간도, 반복 문의에 계속 대응하는 순간도 부담이 됩니다.",
-        problem1Kicker:"문제 01",
-        problem1State:"놓친 전화 → 놓친 기회",
-        problem1Title:"바쁜 순간의 부재중 전화가 신규 고객 이탈로 이어질 수 있어요.",
-        problem1Desc:"업무 중 전화를 받지 못하면 신규 고객의 예약이나 문의에 바로 대응하기 어렵고, 매출로 이어질 기회를 놓치기 쉽습니다.",
-        problem2Kicker:"문제 02",
-        problem2State:"반복 문의 → 업무 중단",
-        problem2Title:"기본 문의까지 직접 받느라 하던 일이 자꾸 끊깁니다.",
-        problem2Desc:"영업시간·위치·서비스 같은 반복 문의에 계속 응대하다 보면 업무 흐름이 끊기고, 정작 중요한 연락을 놓치기 쉬워집니다.",
-
-        howEyebrow:"HOW IT WORKS",
-        howTitle:"미리 설정해두면, 필요한 순간 AI가 대신 응대해요.",
-        howDesc:"대신 받을 조건과 가게 정보를 미리 설정하면, AI가 필요한 전화를 응대하고 통화 결과를 전달합니다.",
-        how1Title:"대신 받을 조건 설정",
-        how1Desc:"AI가 어떤 상황에서 전화를 대신 받을지 조건을 설정합니다.",
-        how2Title:"가게 정보 등록",
-        how2Desc:"영업시간·위치·서비스 등 고객에게 안내할 정보를 미리 등록합니다.",
-        how3Title:"AI가 용건 확인·응대",
-        how3Desc:"조건에 맞는 전화가 오면 AI가 용건을 확인하고 등록된 정보를 기준으로 응대합니다.",
-        how4Title:"통화 결과 확인",
-        how4Desc:"통화 후 주요 내용과 사장님의 후속 연락이 필요한지 여부를 전달합니다.",
-
-        surveyEyebrow:"QUICK SURVEY",
-        surveyTitle:"사장님이라면, 어떤 전화부터 맡기고 싶으신가요?",
-        surveyDesc:"현재 운영 중인 업종과 AI가 대신 받아주면 가장 유용한 전화 유형을 알려주세요.",
-        surveyMeta1:"약 30초 소요",
-        surveyMeta2:"개인정보 수집 없음",
-        surveyMeta3:"가입 없이 바로 참여",
-
-        prev:"이전",
-        next:"다음",
-        submit:"응답 보내기",
-        needAnswer:"답변을 하나 선택해주세요.",
-        reset:"다시 응답하기",
-        localSuccessTitle:"응답이 저장되었습니다.",
-
-        casesEyebrow:"USE CASES",
-        casesTitle:"전화를 받을 수 없는 순간에도 고객 응대는 이어집니다.",
-        casesDesc:"직접 통화하기 어려운 상황에서 AI가 먼저 용건을 확인하고 필요한 내용을 전달합니다.",
-        case1Pill:"손님 응대 중",
-        case1Title:"눈앞의 손님에게 집중하는 동안",
-        case1Desc:"신규 고객의 예약·문의 전화가 오면 AI가 대신 받아 용건을 확인하고 필요한 정보를 안내합니다.",
-        case2Pill:"운전·시술·작업 중",
-        case2Title:"손을 뗄 수 없는 작업 중에도",
-        case2Desc:"영업시간·위치 등 반복적인 기본 문의는 등록된 가게 정보를 기준으로 AI가 안내합니다.",
-        case3Pill:"전화를 받을 수 없을 때",
-        case3Title:"중요한 연락은 놓치지 않도록",
-        case3Desc:"고객이나 거래처의 연락이 오면 AI가 용건을 확인하고, 통화 후 주요 내용과 후속 연락 필요 여부를 전달합니다.",
-
-        trustEyebrow:"TRUST & CONTROL",
-        trustTitle:"정해둔 범위 안에서만 AI가 응대해요.",
-        trustDesc:"등록된 정보와 설정된 기준을 중심으로 응대하고, 판단이 필요한 내용은 사장님이 직접 확인할 수 있도록 설계합니다.",
-        trust1Title:"등록된 정보 기반 응대",
-        trust1Desc:"사장님이 미리 등록한 영업시간·위치·서비스 등 가게 정보를 기준으로 답변합니다.",
-        trust2Title:"AI 개입 범위 제한",
-        trust2Desc:"확인하기 어려운 내용은 AI가 임의로 답하지 않고 상대방의 용건을 접수합니다.",
-        trust3Title:"사용자 확인 후 후속 처리",
-        trust3Desc:"중요한 요청이나 의사결정이 필요한 내용은 사장님이 직접 확인하고 처리합니다.",
-
-        faqTitle:"궁금한 점을 확인해보세요.",
-        faq1Q:"AI는 어떤 내용까지 답변하나요?",
-        faq1A:"사장님이 미리 등록한 영업시간·위치·서비스 등 가게 정보를 기준으로 답변하며, 확인하기 어려운 내용은 임의로 답하지 않고 용건만 접수합니다.",
-        faq2Q:"모든 전화를 AI가 받게 되나요?",
-        faq2A:"아닙니다. 사장님이 AI가 대신 받을 조건을 설정하고, 해당 조건에 맞는 전화에 AI가 응대하는 방식입니다.",
-        faq3Q:"중요한 요청도 AI가 바로 처리하나요?",
-        faq3A:"중요한 요청이나 의사결정이 필요한 내용은 AI가 임의로 확정하지 않고, 통화 후 사장님이 확인하고 직접 처리할 수 있도록 전달합니다.",
-        faq4Q:"통화가 끝난 뒤에는 무엇을 확인할 수 있나요?",
-        faq4A:"통화의 주요 내용과 후속 연락이 필요한지 여부를 전달받을 수 있도록 기획 중입니다.",
-        faq5Q:"전화를 건 사람은 AI와 통화한다는 사실을 알 수 있나요?",
-        faq5A:"네. 통화 시작 시점에 AI가 응대하고 있다는 사실을 명확하게 안내하는 방식으로 기획합니다.",
-
-        finalTitle:"전화 걱정은 줄이고, 일에 더 집중하세요.",
-        finalDesc:"SOHO AI 대신받기, 지금 사전 신청하세요.",
-        finalCta:"사전신청",
-
-        sending:"저장 중…",
-        saveError:"응답을 저장하지 못했습니다. 잠시 후 다시 시도해주세요.",
-        otherBusinessPlaceholder:"업종을 직접 입력해주세요.",
-        needOtherBusiness:"업종을 직접 입력해주세요.",
-        stickyText:"AI가 대신 받을 전화, 알려주세요.",
-        stickyCta:"30초 설문"
-      },
-
-      fr:{
-        navHow:"Comment ça marche",
-        navSurvey:"Donner mon avis",
-        navCases:"Cas d’usage",
-        navCta:"Donner mon avis",
-
-        heroEyebrow:"STANDARD TÉLÉPHONIQUE IA POUR INDÉPENDANTS ET TPE",
-        heroTitle1:"Concentrez-vous sur votre activité.",
-        heroTitle2:"L’IA prend le relais au téléphone.",
-        heroDesc:"Quand vous êtes avec un client, au volant ou en intervention, l’IA décroche à votre place, s’appuie sur les informations de votre établissement et vous transmet l’essentiel après l’appel.",
-        heroCta:"Donner mon avis",
-        heroSecondary:"Comment ça marche ?",
-        heroNote:"Votre avis nous aidera à concevoir un service vraiment utile aux professionnels.",
-        heroStatusTitle:"L’IA a répondu à votre place",
-        heroStatusBody:"Elle a recueilli le motif de l’appel et répondu à partir des informations de votre établissement.",
-
-        problemEyebrow:"POURQUOI C’EST UTILE",
-        problemTitle:"Restez joignable pour vos clients, même quand vous ne pouvez pas décrocher.",
-        problemDesc:"Quand le téléphone sonne au mauvais moment, il faut souvent choisir entre interrompre ce que vous faites et risquer de laisser passer une demande client.",
-        problem1Kicker:"Problème 01",
-        problem1State:"Appel manqué → client potentiel perdu",
-        problem1Title:"Un appel manqué peut suffire à perdre un client potentiel.",
-        problem1Desc:"Quand vous êtes avec un client, en intervention ou en déplacement, vous ne pouvez pas toujours décrocher. Sans réponse, un client potentiel peut facilement appeler ailleurs.",
-        problem2Kicker:"Problème 02",
-        problem2State:"Questions répétitives → interruption",
-        problem2Title:"Les questions répétitives vous interrompent toute la journée.",
-        problem2Desc:"Horaires, adresse, services proposés… répondre à ces demandes répétitives vous interrompt et vous rend moins disponible pour les appels qui nécessitent vraiment votre attention.",
-
-        howEyebrow:"COMMENT ÇA MARCHE",
-        howTitle:"Vous définissez les règles. L’IA prend le relais au bon moment.",
-        howDesc:"Indiquez quand l’IA doit répondre et les informations qu’elle peut utiliser. Lorsqu’un appel correspond aux critères définis, elle prend le relais et vous transmet un récapitulatif.",
-        how1Title:"Choisissez quand l’IA prend le relais",
-        how1Desc:"Choisissez les situations dans lesquelles l’IA doit répondre à votre place.",
-        how2Title:"Renseignez les informations utiles",
-        how2Desc:"Ajoutez les horaires, l’adresse, les services et les informations que l’IA pourra communiquer aux appelants.",
-        how3Title:"L’IA répond selon vos consignes",
-        how3Desc:"Elle recueille le motif de l’appel et répond uniquement à partir des informations et consignes que vous avez définies.",
-        how4Title:"Recevez un récapitulatif",
-        how4Desc:"Après l’appel, vous recevez les points essentiels et savez si vous devez rappeler ou intervenir.",
-
-        surveyEyebrow:"SONDAGE RAPIDE",
-        surveyTitle:"Quels appels aimeriez-vous confier en priorité à l’IA ?",
-        surveyDesc:"3 questions sur votre activité, les appels que vous aimeriez confier à l’IA et votre intérêt pour les appels WhatsApp ou Messenger.",
-        surveyMeta1:"Environ 30 secondes",
-        surveyMeta2:"Sans nom ni coordonnées",
-        surveyMeta3:"Sans création de compte",
-
-        prev:"Précédent",
-        next:"Suivant",
-        submit:"Envoyer mes réponses",
-        needAnswer:"Veuillez sélectionner une réponse.",
-        reset:"Répondre à nouveau",
-        localSuccessTitle:"Votre réponse a bien été enregistrée.",
-
-        casesEyebrow:"CAS D’USAGE",
-        casesTitle:"L’IA prend le relais quand vous ne pouvez pas décrocher.",
-        casesDesc:"Elle comprend le motif de l’appel, répond avec les informations prévues et vous transmet ensuite l’essentiel.",
-        case1Pill:"Pendant que vous servez un client",
-        case1Title:"Continuez de vous occuper du client devant vous",
-        case1Desc:"Si un nouveau client appelle pour réserver ou poser une question, l’IA prend le relais sans interrompre votre échange en cours.",
-        case2Pill:"Au volant, en prestation ou en intervention",
-        case2Title:"Continuez ce que vous faites sans devoir décrocher",
-        case2Desc:"Pour les questions fréquentes comme les horaires ou l’adresse, l’IA répond à partir des informations que vous avez renseignées.",
-        case3Pill:"Quand vous ne pouvez pas répondre",
-        case3Title:"Gardez une trace claire des appels importants",
-        case3Desc:"Lorsqu’un client ou un partenaire appelle, l’IA recueille le motif et vous transmet un résumé clair avec l’éventuelle action à prévoir.",
-
-        trustEyebrow:"CONFIANCE & CONTRÔLE",
-        trustTitle:"L’IA répond uniquement dans le cadre que vous avez défini.",
-        trustDesc:"Elle s’appuie sur les informations enregistrées et les règles définies. Lorsqu’une décision ou une validation de votre part est nécessaire, vous gardez la main.",
-        trust1Title:"Réponses fondées sur les informations enregistrées",
-        trust1Desc:"L’IA répond à partir des informations que vous avez renseignées, comme les horaires, l’adresse ou les services proposés.",
-        trust2Title:"Périmètre d’intervention limité",
-        trust2Desc:"Si une information ne peut pas être confirmée, l’IA ne fournit pas de réponse non vérifiée et se contente de recueillir le motif de l’appel.",
-        trust3Title:"Les décisions restent entre vos mains",
-        trust3Desc:"Si une demande nécessite une décision, l’IA vous la transmet afin que vous puissiez la vérifier et la traiter vous-même.",
-
-        faqTitle:"Questions fréquentes",
-        faq1Q:"À quelles questions l’IA peut-elle répondre ?",
-        faq1A:"Elle répond à partir des informations que vous avez enregistrées, comme les horaires, l’adresse ou les services. Si une information ne peut pas être confirmée, elle ne fournit pas de réponse non vérifiée et recueille simplement le motif de l’appel.",
-        faq2Q:"L’IA répond-elle à tous mes appels ?",
-        faq2A:"Non. Vous définissez les conditions dans lesquelles l’IA doit répondre, et elle intervient uniquement pour les appels correspondant à ces conditions.",
-        faq3Q:"L’IA traite-t-elle directement les demandes importantes ?",
-        faq3A:"Non. Si une demande nécessite une décision, l’IA ne confirme rien de sa propre initiative. Elle recueille les informations utiles et vous transmet la suite à traiter.",
-        faq4Q:"Que puis-je consulter après l’appel ?",
-        faq4A:"Le service est conçu pour vous transmettre les principaux éléments de l’appel ainsi que les éventuelles actions à prévoir de votre côté.",
-        faq5Q:"L’appelant saura-t-il qu’il parle à une IA ?",
-        faq5A:"Oui. Le concept prévoit d’informer clairement l’appelant, dès le début de l’appel, qu’il échange avec une IA.",
-
-        finalTitle:"Moins d’appels à gérer. Plus de temps pour votre activité.",
-        finalDesc:"Votre avis nous aidera à concevoir un service vraiment utile aux professionnels.",
-        finalCta:"Donner mon avis",
-
-        sending:"Enregistrement…",
-        saveError:"Impossible d’enregistrer votre réponse. Veuillez réessayer dans un instant.",
-        otherBusinessPlaceholder:"Saisissez votre secteur d’activité.",
-        needOtherBusiness:"Veuillez saisir votre secteur d’activité.",
-        stickyText:"Quels appels confieriez-vous à l’IA ?",
-        stickyCta:"Sondage 30 s"
-      }
-    };
-
-    const SURVEY = [
-      {
-        id:"business_type",
-        title:{
-          ko:"현재 어떤 업종을 운영하고 계신가요?",
-          fr:"Quel type d’activité exercez-vous actuellement ?"
-        },
-        help:{
-          ko:"가장 가까운 업종 하나를 선택해주세요.",
-          fr:"Sélectionnez le secteur qui correspond le mieux à votre activité."
-        },
-        options:[
-          {value:"real_estate",label:{ko:"부동산·중개",fr:"Immobilier · Agence / mandataire"}},
-          {value:"food_cafe",label:{ko:"음식점·카페",fr:"Restaurant · Café"}},
-          {value:"beauty",label:{ko:"미용·뷰티",fr:"Coiffure · Beauté"}},
-          {value:"healthcare",label:{ko:"병원·약국",fr:"Cabinet médical · Pharmacie"}},
-          {value:"education",label:{ko:"교육·레슨",fr:"Formation · Cours particuliers"}},
-          {value:"repair_install_cleaning",label:{ko:"수리·설치·청소",fr:"Réparation · Installation · Nettoyage"}},
-          {value:"retail",label:{ko:"소매·판매",fr:"Commerce · Vente au détail"}},
-          {value:"professional_service",label:{ko:"전문서비스 (세무·법무·컨설팅 등)",fr:"Services professionnels (comptabilité, juridique, conseil, etc.)"}},
-          {value:"other",label:{ko:"기타",fr:"Autre"}}
-        ]
-      },
-
-      {
-        id:"most_useful_call_type",
-        title:{
-          ko:"AI가 어떤 전화를 대신 받아주면 가장 유용할 것 같나요?",
-          fr:"Quel type d’appel aimeriez-vous confier en priorité à l’IA ?"
-        },
-        help:{
-          ko:"가장 유용할 것 같은 한 가지를 선택해주세요.",
-          fr:"Sélectionnez le type d’appel qui vous serait le plus utile."
-        },
-        options:[
-          {value:"reservation_schedule",label:{ko:"예약·일정 관련 전화",fr:"Réservations · Rendez-vous"}},
-          {value:"hours_location",label:{ko:"영업시간·위치 관련 전화",fr:"Horaires · Adresse"}},
-          {value:"product_service",label:{ko:"상품·서비스 문의",fr:"Questions sur les produits ou services"}},
-          {value:"new_customer",label:{ko:"신규 고객 상담",fr:"Demandes de nouveaux clients"}},
-          {value:"existing_customer",label:{ko:"기존 고객 요청·변경",fr:"Suivi · Modifications pour des clients existants"}},
-          {value:"business_partner",label:{ko:"거래처·업무 연락",fr:"Fournisseurs · Partenaires professionnels"}},
-          {value:"other",label:{ko:"기타",fr:"Autre"}}
-        ]
-      },
-
-      {
-        id:"messaging_voice_call_ai_interest",
-        title:{
-          ko:"WhatsApp과 같은 메신저 앱의 음성통화에서도 AI 대신받기 기능을 이용하고 싶으신가요?",
-          fr:"Souhaiteriez-vous que l’IA puisse aussi répondre à vos appels WhatsApp ou Messenger ?"
-        },
-        help:{
-          ko:"이 기능을 이용하고 싶은 정도를 선택해주세요.",
-          fr:"Indiquez dans quelle mesure cette possibilité vous intéresserait."
-        },
-        options:[
-          {value:"1",label:{ko:"전혀 이용하고 싶지 않다",fr:"Pas du tout"}},
-          {value:"2",label:{ko:"별로 이용하고 싶지 않다",fr:"Plutôt non"}},
-          {value:"3",label:{ko:"보통이다",fr:"Ni oui ni non"}},
-          {value:"4",label:{ko:"이용하고 싶다",fr:"Plutôt oui"}},
-          {value:"5",label:{ko:"매우 이용하고 싶다",fr:"Tout à fait"}}
-        ]
-      }
-    ];
-
-    const state = {
-      lang:'fr',
-      current:0,
-      answers:{},
-      submitted:false
-    };
-
-    const $ = (s,r=document)=>r.querySelector(s);
-    const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
-
-    const t = key => (
-      I18N[state.lang][key] ||
-      I18N.ko[key] ||
-      key
-    );
-
-    const tf = obj => (
-      obj?.[state.lang] ||
-      obj?.ko ||
-      ''
-    );
-
-    function applyLanguage(lang){
-      state.lang = lang;
-      document.documentElement.lang = lang;
-
-      $$('[data-i18n]').forEach(el=>{
-        el.textContent = t(el.dataset.i18n);
-      });
-
-      document.title =
-        lang === 'fr'
-          ? 'Standard téléphonique IA pour indépendants et TPE — ne manquez plus les appels importants'
-          : '소상공인 AI 전화 대신받기';
-
-      if(state.submitted) renderSummary();
-      else renderSurvey();
-    }
-
-    /* Reveal */
-    const reveals = $$('.reveal');
-
-    if('IntersectionObserver' in window){
-      const ro = new IntersectionObserver((entries,obs)=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-            obs.unobserve(entry.target);
-          }
-        });
-      },{
-        threshold:.12,
-        rootMargin:'0px 0px -32px 0px'
-      });
-
-      reveals.forEach(el=>ro.observe(el));
-    }else{
-      reveals.forEach(el=>el.classList.add('visible'));
-    }
-
-    /* FAQ */
-    $$('.faq-question').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        btn.closest('.faq-item')?.classList.toggle('open');
-      });
-    });
-
-    /* Survey */
-    const questionWrap = $('#questionWrap');
-    const progressText = $('#progressText');
-    const progressBar = $('#progressBar');
-    const prevBtn = $('#prevBtn');
-    const nextBtn = $('#nextBtn');
-    const msg = $('#surveyMsg');
-    const form = $('#surveyForm');
-    const success = $('#surveySuccess');
-
-    function total(){
-      return SURVEY.length;
-    }
-
-    function renderSurvey(){
-      const q = SURVEY[state.current];
-
-      if(!q){
-        questionWrap.innerHTML='';
-        return;
-      }
-
-      const opts = q.options.map(o=>{
-        const sel =
-          state.answers[q.id]===o.value
-            ? ' selected'
-            : '';
-
-        return `
-          <button
-            type="button"
-            class="option${sel}"
-            data-value="${o.value}">
-            ${tf(o.label)}
-          </button>
-        `;
-      }).join('');
-
-      const showBusinessOther =
-        q.id==='business_type' &&
-        state.answers.business_type==='other';
-
-      const otherField = showBusinessOther
-        ? `
-          <div class="other-business-field">
-            <input
-              type="text"
-              id="businessTypeOther"
-              maxlength="80"
-              placeholder="${t('otherBusinessPlaceholder')}"
-              aria-label="${t('otherBusinessPlaceholder')}"
-            />
-          </div>
-        `
-        : '';
-
-      questionWrap.innerHTML = `
-        <section class="survey-question active">
-          <h3>${tf(q.title)}</h3>
-          ${
-            tf(q.help)
-              ? `<p class="survey-help">${tf(q.help)}</p>`
-              : ''
-          }
-          <div class="option-grid">
-            ${opts}
-          </div>
-          ${otherField}
-        </section>
-      `;
-
-      $$('.option', questionWrap).forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          state.answers[q.id] = btn.dataset.value;
-
-          if(
-            q.id==='business_type' &&
-            btn.dataset.value!=='other'
-          ){
-            delete state.answers.business_type_other;
-          }
-
-          msg.textContent='';
-          renderSurvey();
-        });
-      });
-
-      const otherInput = $('#businessTypeOther');
-
-      if(otherInput){
-        otherInput.value =
-          state.answers.business_type_other || '';
-
-        otherInput.addEventListener('input', ()=>{
-          state.answers.business_type_other =
-            otherInput.value;
-
-          msg.textContent='';
-        });
-
-        setTimeout(()=>otherInput.focus(),0);
-      }
-
-      progressText.textContent =
-        `${state.current+1} / ${total()}`;
-
-      progressBar.style.width =
-        `${((state.current+1)/total())*100}%`;
-
-      prevBtn.disabled =
-        state.current===0;
-
-      nextBtn.textContent =
-        state.current===total()-1
-          ? t('submit')
-          : t('next');
-
-      msg.textContent='';
-    }
-
-    function validateCurrent(){
-      const q = SURVEY[state.current];
-
-      if(!state.answers[q.id]){
-        msg.textContent = t('needAnswer');
-        return false;
-      }
-
-      if(
-        q.id==='business_type' &&
-        state.answers.business_type==='other'
-      ){
-        const otherText =
-          (state.answers.business_type_other || '').trim();
-
-        if(!otherText){
-          msg.textContent = t('needOtherBusiness');
-
-          const input = $('#businessTypeOther');
-          if(input) input.focus();
-
-          return false;
-        }
-
-        state.answers.business_type_other = otherText;
-      }
-
-      return true;
-    }
-
-    prevBtn.addEventListener('click', ()=>{
-      if(state.current<=0) return;
-
-      state.current--;
-      renderSurvey();
-    });
-
-    function collectTracking(){
-      const params =
-        new URLSearchParams(location.search);
-
-      const keys = [
-        'utm_source',
-        'utm_medium',
-        'utm_campaign',
-        'utm_content',
-        'utm_term',
-        'fbclid'
-      ];
-
-      const out = {};
-
-      keys.forEach(k=>{
-        out[k] =
-          (params.get(k) || '').slice(0,300) ||
-          null;
-      });
-
-      out.referrer =
-        (document.referrer || '').slice(0,500) ||
-        null;
-
-      out.page_path =
-        location.pathname.slice(0,300);
-
-      out.variant =
-        (
-          params.get('v') ||
-          params.get('variant') ||
-          ''
-        ).slice(0,80) ||
-        null;
-
-      return out;
-    }
-
-    nextBtn.addEventListener('click', async ()=>{
-      if(!validateCurrent()) return;
-
-      if(state.current < total()-1){
-        state.current++;
-        renderSurvey();
-        return;
-      }
-
-      const surveyAnswers = {
-        business_type:
-          state.answers.business_type,
-
-        business_type_other:
-          state.answers.business_type==='other'
-            ? (state.answers.business_type_other || '')
-            : '',
-
-        most_useful_call_type:
-          state.answers.most_useful_call_type,
-
-        messaging_voice_call_ai_interest:
-          state.answers.messaging_voice_call_ai_interest
-      };
-
-      const payload = {
-        site:window.SITE_ID,
-        language:'fr',
-        answers:surveyAnswers,
-        website:$('#website')?.value || '',
-        ...collectTracking()
-      };
-
-      try {
-        nextBtn.disabled = true;
-        nextBtn.textContent = t('sending');
-        msg.textContent = '';
-
-        const response = await fetch('/api/submit',{
-          method:'POST',
-          headers:{
-            'Content-Type':'application/json'
-          },
-          body:JSON.stringify(payload)
-        });
-
-        if(!response.ok){
-          const errorText =
-            await response.text().catch(()=>'');
-
-          throw new Error(
-            `HTTP ${response.status}${
-              errorText
-                ? `: ${errorText}`
-                : ''
-            }`
-          );
-        }
-
-        state.submitted = true;
-        form.style.display = 'none';
-        success.classList.add('show');
-        renderSummary();
-
-      }catch(error){
-        console.error(
-          'Survey submit error:',
-          error
-        );
-
-        msg.textContent =
-          t('saveError');
-
-      }finally{
-        nextBtn.disabled = false;
-        nextBtn.textContent = t('submit');
-      }
-    });
-
-    function renderSummary(){
-      const summary = $('#surveySummary');
-
-      const rows = SURVEY.map(q=>{
-        const val = state.answers[q.id];
-        const opt =
-          q.options.find(o=>o.value===val);
-
-        let display =
-          opt
-            ? tf(opt.label)
-            : '—';
-
-        if(
-          q.id==='business_type' &&
-          val==='other' &&
-          state.answers.business_type_other
-        ){
-          display =
-            `${display} · ${state.answers.business_type_other}`;
-        }
-
-        return [
-          tf(q.title),
-          display
-        ];
-      });
-
-      summary.innerHTML =
-        rows
-          .map(([k,v])=>`
-            <div class="summary-row">
-              <span>${k}</span>
-              <strong>${v}</strong>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-single reveal">
+      <div class="hero-shell-embedded" aria-label="Illustration Assistant téléphonique IA">
+        <img
+          class="hero-image-embedded"
+          src="assets/assistant-hero-fr.jpg"
+          alt="Un utilisateur reste concentré sur son activité pendant que l’IA prend un appel à sa place"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-embedded-veil"></div>
+        <div class="hero-embedded-overlay">
+          <div class="hero-embedded-copy">
+            <div class="eyebrow">Assistant téléphonique IA</div>
+            <h1>
+              <span>Vous ne pouvez pas décrocher ?</span>
+              <span class="soft">L’IA répond à votre place.</span>
+            </h1>
+            <div class="hero-status-card">
+              <div class="hero-status-icon">IA</div>
+              <div>
+                <strong>L’IA a répondu à votre place</strong>
+                <p>Elle peut indiquer que vous êtes indisponible, suivre vos consignes et vous transmettre un résumé clair.</p>
+              </div>
             </div>
-          `)
-          .join('');
+          </div>
+        </div>
+      </div>
+      <div class="hero-actions hero-actions-below">
+        <a class="btn btn-primary" href="#survey">Donner mon avis · 1 min</a>
+        <a class="btn btn-secondary" href="#how">Voir comment ça marche</a>
+        <p class="hero-note">3 questions · sans inscription · moins d’une minute</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section survey" id="survey">
+    <div class="container survey-shell">
+      <div class="survey-intro reveal">
+        <div class="eyebrow">Sondage rapide</div>
+        <h2>Quand aimeriez-vous que l’IA réponde à votre place ?</h2>
+        <p>3 questions rapides pour comprendre quels appels vous dérangent le plus et ce que vous seriez prêt à confier à l’IA.</p>
+        <div class="survey-meta"><span class="meta-chip">3 questions</span><span class="meta-chip">Sans inscription</span><span class="meta-chip">Moins d’une minute</span></div>
+      </div>
+      <div class="survey-card reveal">
+        <form id="surveyForm" novalidate>
+          <label class="hp" aria-hidden="true">Website<input type="text" id="website" name="website" autocomplete="off" tabindex="-1" /></label>
+          <div class="survey-progress"><span id="progressText">1 / 3</span><div class="progress-track"><div class="progress-bar" id="progressBar"></div></div></div>
+          <div id="questionViewport"><div id="questionWrap"></div></div>
+          <div class="survey-actions" id="surveyActions"><button type="button" class="btn btn-secondary" id="prevBtn" disabled>Précédent</button><button type="button" class="btn btn-primary" id="nextBtn">Suivant</button></div>
+          <p class="survey-msg" id="surveyMsg" role="alert"></p>
+        </form>
+        <div class="survey-success" id="surveySuccess">
+          <h3>Merci pour votre réponse.</h3>
+          <p id="successBody">Votre avis nous aide à concevoir un service réellement utile au quotidien.</p>
+          <div class="survey-summary" id="surveySummary"></div>
+          <div style="margin-top:20px"><button type="button" class="btn btn-secondary" id="resetSurvey">Répondre à nouveau</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="problem">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow">Le problème</div><h2>Le téléphone sonne toujours au mauvais moment.</h2></div>
+        <p>Vous êtes déjà occupé, mais le téléphone sonne. Vous décrochez et interrompez ce que vous faites — ou vous laissez passer l’appel et devez rappeler plus tard, même pour une demande qui aurait pu être réglée en quelques secondes.</p>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card reveal">
+          <div class="problem-kicker"><span>Situation 01</span><span>Vous n’êtes pas disponible</span></div>
+          <div class="problem-visual"><img class="problem-photo" src="why-now-problem-01.png" alt="Utilisateur gêné par un appel entrant pendant une réunion ou une tâche professionnelle" loading="lazy" decoding="async" /></div>
+          <div><h3>Vous ne pouvez pas décrocher, mais il faut quand même expliquer quand vous serez disponible.</h3><p>En réunion ou en plein travail, vous laissez sonner. Puis il faut rappeler, expliquer la situation et trouver un moment pour échanger.</p></div>
+        </article>
+        <article class="problem-card reveal">
+          <div class="problem-kicker"><span>Situation 02</span><span>Un appel simple vous interrompt</span></div>
+          <div class="problem-visual"><img class="problem-photo" src="why-now-problem-02.png" alt="Utilisateur interrompu dans son travail pour confirmer un rendez-vous ou gérer un appel du service après-vente" loading="lazy" decoding="async" /></div>
+          <div><h3>Parfois, il suffirait d’une réponse simple.</h3><p>Confirmer une réservation, fixer un créneau d’intervention ou simplement dire oui ou non peut suffire. Pourtant, l’appel vous interrompt quand même.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow">Comment ça marche</div><h2>Vous gardez la main. L’IA prend le relais.</h2></div>
+        <p>Vous choisissez quand l’IA intervient et ce qu’elle peut faire. Elle répond uniquement dans ce cadre, puis vous transmet l’essentiel.</p>
+      </div>
+      <div class="how-panel"><div class="how-grid">
+        <article class="how-step reveal"><span class="how-num">01</span><div class="how-icon">☎</div><h3>Choisissez quand elle intervient</h3><p>Définissez les horaires et les situations où l’IA peut répondre à votre place.</p></article>
+        <article class="how-step reveal"><span class="how-num">02</span><div class="how-icon">◎</div><h3>Donnez-lui vos consignes</h3><p>Connectez votre agenda et indiquez à l’avance ce qu’elle peut dire ou faire pour certains appels.</p></article>
+        <article class="how-step reveal"><span class="how-num">03</span><div class="how-icon">IA</div><h3>L’IA répond à votre place</h3><p>Elle échange avec votre interlocuteur et agit uniquement dans les limites que vous avez fixées.</p></article>
+        <article class="how-step reveal"><span class="how-num">04</span><div class="how-icon">✓</div><h3>Vous recevez l’essentiel</h3><p>Après l’appel, vous recevez un résumé clair de ce qui a été dit, fait ou reste à confirmer.</p></article>
+      </div></div>
+    </div>
+  </section>
+
+
+
+  <section class="section" id="usecases">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow">Exemples</div><h2>Des appels simples, pris en charge sans vous interrompre.</h2></div>
+        <p>L’IA peut expliquer que vous êtes indisponible, consulter vos créneaux ou transmettre une réponse simple — puis vous dire exactement ce qui s’est passé.</p>
+      </div>
+      <div class="usecase-grid">
+        <article class="usecase-card reveal">
+          <div class="usecase-top"><span>01</span><span class="status-pill"><i></i><span>En réunion</span></span></div>
+          <div class="usecase-visual"><img class="usecase-photo" src="usecase-01-meeting.png" alt="L’IA explique qu’un utilisateur est en réunion et indique à quel moment il sera disponible" loading="lazy" decoding="async" /></div>
+          <h3>En réunion ? L’IA indique quand vous serez de nouveau disponible.</h3>
+          <p>Elle consulte votre agenda, indique que vous êtes indisponible et propose un créneau adapté.</p>
+        </article>
+        <article class="usecase-card reveal">
+          <div class="usecase-top"><span>02</span><span class="status-pill"><i></i><span>Rendez-vous SAV</span></span></div>
+          <div class="usecase-visual"><img class="usecase-photo" src="usecase-02-as-scheduling.png" alt="L’IA organise à la place de l’utilisateur un rendez-vous avec un service après-vente" loading="lazy" decoding="async" /></div>
+          <h3>Un service après-vente vous appelle ? L’IA peut fixer un créneau à votre place.</h3>
+          <p>Elle indique vos disponibilités et convient d’un créneau dans le cadre que vous avez défini. Si une décision sort de ce cadre, elle vous demande confirmation.</p>
+        </article>
+        <article class="usecase-card reveal">
+          <div class="usecase-top"><span>03</span><span class="status-pill"><i></i><span>Confirmation de réservation</span></span></div>
+          <div class="usecase-visual"><img class="usecase-photo" src="usecase-03-reservation-check.png" alt="L’IA confirme à la place de l’utilisateur qu’une réservation reste inchangée" loading="lazy" decoding="async" /></div>
+          <h3>Une réservation à confirmer ? L’IA transmet votre réponse.</h3>
+          <p>Elle peut confirmer la réservation ou demander une modification selon les consignes que vous avez définies à l’avance.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="trust">
+    <div class="container trust-grid">
+      <div class="trust-copy reveal">
+        <div class="eyebrow">Vous gardez le contrôle</div>
+        <h2>L’IA agit pour vous. Les décisions importantes restent entre vos mains.</h2>
+        <p>Vous décidez quelles informations elle peut utiliser, quels appels elle peut gérer et jusqu’où elle peut aller. Pour le reste, elle vous redonne la main.</p>
+      </div>
+      <div class="trust-list">
+        <article class="trust-item reveal"><span class="trust-index">01</span><div><h3>Seulement les informations utiles</h3><p>L’IA utilise uniquement les éléments nécessaires à l’appel et les informations que vous avez choisi de lui fournir.</p></div></article>
+        <article class="trust-item reveal"><span class="trust-index">02</span><div><h3>Vous définissez ce qu’elle peut faire</h3><p>Informer, consulter vos disponibilités, confirmer un rendez-vous : c’est vous qui fixez le périmètre.</p></div></article>
+        <article class="trust-item reveal"><span class="trust-index">03</span><div><h3>Les décisions importantes restent les vôtres</h3><p>Paiement, contrat ou changement important : l’IA ne décide pas seule et vous demande confirmation.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="faq">
+    <div class="container">
+      <div class="faq-head"><div class="eyebrow">FAQ</div><h2>Vous vous posez peut-être ces questions.</h2></div>
+      <div class="faq-grid" style="margin-top:28px">
+        <div class="faq-item open"><button class="faq-question" type="button"><span>La personne qui appelle saura-t-elle qu’elle parle à une IA ?</span><b>+</b></button><div class="faq-answer">Oui. Le concept prévoit que la personne soit clairement informée dès le début de l’appel qu’elle échange avec une IA.</div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>L’IA va-t-elle révéler le contenu de mon agenda ?</span><b>+</b></button><div class="faq-answer">Non. Elle utilise uniquement les informations nécessaires, par exemple vos disponibilités, sans transmettre le détail de votre agenda.</div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>Et si la demande dépasse ce que j’ai autorisé ?</span><b>+</b></button><div class="faq-answer">L’IA ne prend pas de décision seule. Si la demande sort du cadre défini, elle vous demande confirmation.</div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>L’IA répondra-t-elle à tous mes appels ?</span><b>+</b></button><div class="faq-answer">Non. Vous choisissez les horaires, les situations et le type d’appels pour lesquels elle peut intervenir.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta" id="final">
+    <div class="container"><div class="final-box">
+      <div class="reveal"><div class="eyebrow">Assistant téléphonique IA</div><h2>Et si, la prochaine fois, vous n’aviez pas besoin de décrocher ?</h2></div>
+      <div class="final-side reveal"><p>Dites-nous quels appels vous aimeriez confier à l’IA. Cela ne prend que quelques secondes.</p><a class="btn btn-primary" href="#survey">Donner mon avis</a></div>
+    </div></div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container footer-inner"><span>© 2026 CALL X. Concept prototype.</span><nav class="footer-links"><a href="https://callx-legal.vercel.app/privacy.html">Politique de confidentialité</a><a href="https://callx-legal.vercel.app/terms.html">CGU</a></nav></div></footer>
+<div class="mobile-sticky" id="mobileSticky" aria-hidden="true"><small>Dans quels cas laisseriez-vous l’IA répondre à votre place ?</small><a class="btn btn-primary" href="#survey">Donner mon avis</a></div>
+
+<script>
+(() => {
+  'use strict';
+  const SURVEY = [
+    {
+      id:'pain_point', summary:'Principal problème',
+      title:'Quand vous ne pouvez pas décrocher, qu’est-ce qui vous gêne le plus ?',
+      help:'Choisissez la réponse la plus proche de votre situation.',
+      options:[
+        {value:'call_back',label:'Devoir rappeler plus tard les appels manqués'},
+        {value:'explain_and_share_time',label:'Devoir expliquer que je suis indisponible et préciser quand je serai disponible'},
+        {value:'simple_calls_interrupt',label:'Être interrompu pour une simple confirmation'},
+        {value:'multiple_calls_schedule',label:'Multiplier les appels pour trouver un créneau'},
+        {value:'hard_to_ignore',label:'Ne pas oser laisser sonner au cas où l’appel serait important'},
+        {value:'no_major_issue',label:'Ce n’est pas vraiment un problème pour moi'},
+        {value:'other',label:'Autre'}
+      ]
+    },
+    {
+      id:'useful_task', summary:'Tâche la plus utile',
+      title:'Qu’aimeriez-vous surtout que l’IA fasse à votre place ?',
+      help:'Choisissez ce qui vous serait le plus utile.',
+      options:[
+        {value:'status_and_availability',label:'Dire que je suis indisponible et préciser quand je serai disponible'},
+        {value:'reservation_schedule',label:'Confirmer ou modifier une réservation ou un rendez-vous'},
+        {value:'visit_schedule',label:'Trouver un créneau pour une intervention SAV, une livraison ou une installation'},
+        {value:'simple_intent',label:'Donner une réponse simple : confirmer, accepter ou refuser'},
+        {value:'take_message_summary',label:'Prendre le message et m’envoyer un résumé'},
+        {value:'other',label:'Autre'}
+      ]
+    },
+    {
+      id:'usage_context', summary:'Situation d’usage',
+      title:'Dans quelle situation utiliseriez-vous le plus cette fonction ?',
+      help:'Choisissez la situation qui vous correspond le mieux.',
+      options:[
+        {value:'meeting_work',label:'Pendant une réunion ou quand je suis concentré sur mon travail'},
+        {value:'driving_moving',label:'Quand je conduis ou que je suis en déplacement'},
+        {value:'dont_want_to_answer',label:'Quand je ne souhaite simplement pas répondre tout de suite'},
+        {value:'selected_calls_only',label:'Quand je veux confier seulement certains appels à l’IA'},
+        {value:'would_not_use',label:'Je ne pense pas utiliser cette fonction'}
+      ]
     }
-
-    $('#resetSurvey').addEventListener('click', ()=>{
-      Object.assign(state,{
-        current:0,
-        answers:{},
-        submitted:false
-      });
-
-      if($('#website')){
-        $('#website').value='';
-      }
-
-      success.classList.remove('show');
-      form.style.display='';
-      renderSurvey();
-    });
-
-    /* Mobile sticky */
-    const sticky = $('#mobileSticky');
-    const surveySection = $('#survey');
-
-    function updateSticky(){
-      if(innerWidth>767){
-        sticky.classList.remove('show');
-        sticky.setAttribute('aria-hidden','true');
-        return;
-      }
-
-      const y = scrollY;
-
-      const show =
-        y > innerHeight*.65 &&
-        y < surveySection.offsetTop - 160;
-
-      sticky.classList.toggle('show',show);
-      sticky.setAttribute(
-        'aria-hidden',
-        String(!show)
-      );
-    }
-
-    addEventListener(
-      'scroll',
-      updateSticky,
-      {passive:true}
-    );
-
-    addEventListener(
-      'resize',
-      updateSticky,
-      {passive:true}
-    );
-
-    applyLanguage('fr');
-    renderSurvey();
-    updateSticky();
-  })();
-  </script>
-
-  <script src="tracking.js"></script>
+  ];
+  const COPY={prev:'Précédent',next:'Suivant',submit:'Envoyer mes réponses',sending:'Enregistrement…',needAnswer:'Veuillez sélectionner une réponse.',saveError:'Impossible d’enregistrer votre réponse. Veuillez réessayer dans un instant.',successTitle:'Merci pour votre réponse.',successBody:'Votre avis nous aide à concevoir un service réellement utile au quotidien.',localSuccessTitle:'Réponse de test prise en compte.',localSuccessBody:'Vous consultez une version locale : cette réponse n’a pas été enregistrée sur le serveur.'};
+  const state={current:0,answers:{},submitted:false};
+  const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+  const reveals=$$('.reveal');
+  if('IntersectionObserver' in window){const ro=new IntersectionObserver((es,obs)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -32px 0px'});reveals.forEach(el=>ro.observe(el));}else reveals.forEach(el=>el.classList.add('visible'));
+  $$('.faq-question').forEach(btn=>btn.addEventListener('click',()=>btn.closest('.faq-item')?.classList.toggle('open')));
+  const questionWrap=$('#questionWrap'),questionViewport=$('#questionViewport'),progressText=$('#progressText'),progressBar=$('#progressBar'),prevBtn=$('#prevBtn'),nextBtn=$('#nextBtn'),msg=$('#surveyMsg'),form=$('#surveyForm'),success=$('#surveySuccess');
+  function total(){return SURVEY.length}
+  function syncHeight(){requestAnimationFrame(()=>{if(questionViewport&&questionWrap)questionViewport.style.height=`${questionWrap.offsetHeight}px`;});}
+  function renderSurvey(direction=1,animate=false){
+    const q=SURVEY[state.current]; if(!q){questionWrap.innerHTML='';return;}
+    const opts=q.options.map(o=>`<button type="button" class="option${state.answers[q.id]===o.value?' selected':''}" data-value="${o.value}">${o.label}</button>`).join('');
+    questionWrap.innerHTML=`<section class="survey-question${animate?(direction>0?' enter-right':' enter-left'):''}"><h3>${q.title}</h3>${q.help?`<p class="survey-help">${q.help}</p>`:''}<div class="option-grid" data-group="${q.id}">${opts}</div></section>`;
+    $$('.option',questionWrap).forEach(btn=>btn.addEventListener('click',()=>{state.answers[q.id]=btn.dataset.value;$$('.option',questionWrap).forEach(x=>x.classList.toggle('selected',x===btn));msg.textContent='';syncHeight();}));
+    progressText.textContent=`${state.current+1} / ${total()}`; progressBar.style.width=`${((state.current+1)/total())*100}%`; prevBtn.disabled=state.current===0; nextBtn.textContent=state.current===total()-1?COPY.submit:COPY.next; msg.textContent=''; syncHeight();
+  }
+  function validateCurrent(){const q=SURVEY[state.current];if(!state.answers[q.id]){msg.textContent=COPY.needAnswer;return false}return true}
+  prevBtn.addEventListener('click',()=>{if(state.current<=0)return;state.current--;renderSurvey(-1,true)});
+  nextBtn.addEventListener('click',async()=>{if(!validateCurrent())return;if(state.current<total()-1){state.current++;renderSurvey(1,true);return}await submitSurvey()});
+  function collectTracking(){const params=new URLSearchParams(location.search);const keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'];const out={};keys.forEach(k=>out[k]=(params.get(k)||'').slice(0,300)||null);out.referrer=(document.referrer||'').slice(0,500)||null;out.page_path=location.pathname.slice(0,300);out.variant=(params.get('v')||params.get('variant')||'').slice(0,80)||null;return out}
+  function payload(){return{site:window.SITE_ID,language:'fr',answers:{...state.answers},website:$('#website')?.value||'',...collectTracking()}}
+  async function submitSurvey(){nextBtn.disabled=true;prevBtn.disabled=true;nextBtn.textContent=COPY.sending;msg.textContent='';const data=payload();const isLocal=location.protocol==='file:'||/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);if(isLocal){console.log('[LANDING] local survey preview',data);setTimeout(()=>showSuccess(false),250);return}try{const res=await fetch('/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});if(!res.ok)throw new Error(`HTTP ${res.status}`);showSuccess(true)}catch(err){console.error('[LANDING] survey save failed',err);msg.textContent=COPY.saveError;nextBtn.disabled=false;prevBtn.disabled=state.current===0;nextBtn.textContent=COPY.submit}}
+  function renderSummary(){const summary=$('#surveySummary');if(!summary)return;const rows=SURVEY.map(q=>{const val=state.answers[q.id];const opt=q.options.find(o=>o.value===val);return[q.summary,opt?opt.label:'—']});summary.innerHTML=rows.map(([k,v])=>`<div class="summary-row"><span>${k}</span><strong>${v}</strong></div>`).join('')}
+  function showSuccess(saved){state.submitted=true;form.style.display='none';success.classList.add('show');$('#successBody').textContent=saved?COPY.successBody:COPY.localSuccessBody;$('.survey-success h3').textContent=saved?COPY.successTitle:COPY.localSuccessTitle;renderSummary();success.scrollIntoView({behavior:'smooth',block:'center'})}
+  $('#resetSurvey').addEventListener('click',()=>{Object.assign(state,{current:0,answers:{},submitted:false});$('#website').value='';success.classList.remove('show');form.style.display='';nextBtn.disabled=false;renderSurvey();form.scrollIntoView({behavior:'smooth',block:'center'})});
+  const sticky=$('#mobileSticky'),surveySection=$('#survey');function updateSticky(){if(innerWidth>767){sticky.classList.remove('show');sticky.setAttribute('aria-hidden','true');return}const y=scrollY;const show=y>innerHeight*.65&&y<surveySection.offsetTop-180;sticky.classList.toggle('show',show);sticky.setAttribute('aria-hidden',String(!show))}addEventListener('scroll',updateSticky,{passive:true});addEventListener('resize',()=>{updateSticky();syncHeight()},{passive:true});
+  prevBtn.textContent=COPY.prev;nextBtn.textContent=COPY.next;renderSurvey();updateSticky();
+})();
+</script>
+<script src="tracking.js"></script>
 </body>
 </html>
